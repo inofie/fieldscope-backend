@@ -1,0 +1,24 @@
+{
+  "name": "jscolor-picker",
+  "version": "2.0.4",
+  "description": "jscolor is a web color picker component that aims to be super easy both for developers to install and end users to use.",
+  "main": "jscolor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clementdemily/jscolor.git"
+  },
+  "keywords": [
+    "jscolor",
+    "color",
+    "picker"
+  ],
+  "author": "Jan Odvarko",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/clementdemily/jscolor/issues"
+  },
+  "homepage": "https://github.com/clementdemily/jscolor#readme"
+}

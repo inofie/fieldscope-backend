@@ -1,0 +1,28 @@
+
+
+.page-break {
+    page-break-after: always;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.right li {
+    text-align: right;
+}

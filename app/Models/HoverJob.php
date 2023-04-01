@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Models;
+
+use App\Traits\GeneralModelTrait;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
+
+class HoverJob extends Model
+{
+    use SoftDeletes, GeneralModelTrait;
+    protected $table = "hover_jobs";
+
+    protected $fillable = [ 'project_ref_id','job_id', 'company_id', 'json_response','file_path', 'created_at', 'updated_at', 'deleted_at'];
+
+    /**
+     * status_id :
+        Created	    1	The report has just been created and has not yet been worked on.
+        InProcess	2	The report is being worked on.
+        Pending	    3	The report is waiting for customer response.
+        Closed	    4	The report is closed.
+        Completed	5	The report has been completed.
+     **/
+
+    public $status = [
+        '1' => [ 'name' => 'Created',   'description' => 'The report has just been created and has not yet been worked on.' ],
+        '2' => ['name' => 'InProcess',  'description' => 'The report is being worked on.'],
+        '3' => ['name' => 'Pending',    'description' => 'The report is waiting for customer response.'],
+        '4' => ['name' => 'Closed',     'description' => 'The report is closed.'],
+        '5' => ['name' => 'Completed',  'description' => 'The report has been completed.'],
+    ];
+
+
+    public static function getById($id){
+        $query = self::select();
+        return $query->where('id', $id)
+            ->first();
+    }
+
+    public function updateResponse($request,$response,$filePath){
+
+        $update = [
+            'json_response' => json_encode($response),
+            'file_path' => basename($filePath),
+            'updated_at' => now(),
+        ];
+
+        return $this->where(['job_id' => $request['job_id']])->update($update);
+    }
+}

@@ -1,0 +1,421 @@
+@font-face {
+	font-family: "Gibson";
+	src: url('../../fonts/Gibson/Gibson-Regular.otf');
+  }
+  @font-face {
+	font-family: "Gibson Bold";
+	src: url('../../fonts/Gibson/Gibson-Bold.otf');
+  }
+  @font-face {
+	font-family: "Avenir Bold";
+	src: url('../../fonts/AvenirNextCyr-Bold.ttf');
+  }
+  @font-face {
+	font-family: "Avenir Regular";
+	src: url('../../fonts/AvenirNextCyr-Regular.ttf');
+  }
+  @font-face {
+	font-family: "Gibson SemiBold";
+	src: url('../../fonts/Gibson/Gibson-SemiBold.otf');
+  }
+  @font-face {
+	font-family: "Avenir Medium";
+	src: url('../../fonts/AvenirNextCyr-Medium.ttf');
+  }
+  body{
+    font-family: 'Gibson';
+    color: #6d757d !important;
+  }
+.section{
+    padding:50px 0px;
+}
+p{
+    color: #2b3248;
+    font-family: 'Gibson';
+}
+.btn-add{
+	background: #00ADE7;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Gibson';
+	padding: 10px 30px;
+	cursor: pointer;
+}
+.house{
+    width: 500px;
+}
+
+.theme{
+    color: #2b3248;
+    font-family: 'Gibson';
+}
+
+.ft-16{
+    font-size: 16px;
+}
+
+.form-control{
+    border-left: 0px;
+    background:#F5F5F5;
+}
+
+.form-control:focus{
+    color:#00ADE7 !important;
+    box-shadow: none;
+    border-left: 0px;
+    background: #F7FDFF;
+   
+}
+.input-group-text{
+    width: 40px;
+    background:#F5F5F5;
+    color:gray;
+}
+
+.form-control:focus::placeholder {
+    color:#00ADE7 !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  .form-control:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:#00ADE7 !important;
+  }
+  
+  .form-control:focus::-ms-input-placeholder { /* Microsoft Edge */
+   color:#00ADE7 !important;
+  }
+  .footer{
+      background: #F5F5F5;
+  }
+
+  .wd-100{
+      width:100px;
+  }
+
+  /* MOdified UI */
+
+/* Login page */
+/* .login-leftsidesec {
+    background-color: #10151d;
+  } */
+  .login-rightsidesec {
+    background-image: linear-gradient(to bottom, rgba(132, 223, 253,0) 64%, rgba(0, 130, 241, 0.25));
+    min-height: 100vh;
+  }
+  .login-body > h6,
+  .login-body > p,
+  .login-ipfields,
+  .login-ipfields:focus,
+  .login-ipfields::placeholder{
+    font-family: 'Avenir Medium', sans-serif ;
+    font-size: 16px;
+    font-weight: 500;
+  }
+ 
+  .login-body > h6{
+    margin: 60.8px 49.1px 9.7px 0.6px;
+  }
+  .login-body > p,
+  .login-ipfields,
+  .login-ipfields:focus,
+  .login-ipfields::placeholder,
+  .login-ipfields:focus::placeholder
+   {
+    font-family: 'Avenir Medium', sans-serif ;
+    color: #2b3248 ;
+  }
+  .login-ipfields::placeholder,
+  .login-ipfields:focus::placeholder
+   {
+    opacity: 1 !important;
+    color: #2b3248 !important;
+  }
+ 
+  .login-ipfields,
+  .login-ipfields:focus{
+    border-radius: 5px !important;
+    border: solid 1px #cfced4 !important;
+    background-color: #f5f5f5 !important;
+  }
+  .login-body > p{
+   color: #fff;
+  }
+  .login-body > h6
+  {  
+    color: #80dfff;
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+  .login-body > form > .form-group  label{
+    font-family: 'Avenir Medium', sans-serif ;
+    color: #fff;
+  }
+  .login-forgotpass,
+  .login-forgotpass:hover{
+    font-size: 13px;
+    text-decoration: none;
+    font-family: 'Avenir Medium', sans-serif ;
+    color: #80dfff;
+   
+  }
+  /* .login-ipfields,
+  .login-ipfields:focus{
+    opacity: 0.3 !important;
+    font-size: 14px !important;
+    line-height: 0.56 !important;
+    color: #fff !important;
+    background: transparent !important;
+    padding: 12px 18px 13px 18px !important;
+    border-radius: 5px !important;
+    border: solid 1px #cfced4 !important;
+  } */
+  .login-ipcheck{
+    background-color: #fff   !important;
+  }
+  
+  .login-rightside-headersec > * {
+    display: inline-block;
+  }
+  .login-rightside-footersec > ul > li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .login-rightside-headersec > a,
+  .login-rightside-footersec > ul > li > a,
+  .login-afterlogotypo > p,
+  .login-for-sc-dha
+  {
+    font-size: 14px;
+    line-height: 1.06;
+    color: #fff ;
+  }
+  .login-form-check {
+    margin: 20px 0px 20px 0;
+  }
+  .login-btn {
+    width: 100%;
+    height: 44px;
+    font-weight: 500 !important;
+    border: 1px solid transparent;
+    color: #000;
+    border-radius: 5px;
+    background-color: #80dfff;
+  }
+  .login-icondiv{
+    margin-top: 19vh;
+  }
+  
+  .login-rightside-footersec > ul > li > a{
+    text-decoration: none;
+    margin: 1px 40px 0 0;
+    font-family: 'Gibson Regular', sans-serif;
+  }
+  
+  .login-rightside-headersec > p,
+  .login-for-sc-dha{
+    margin: 14px 9px 14px 0;  
+    font-family: 'Avenir Medium', sans-serif ;
+    color: #fff !important;
+  }
+  .login-rightsidevhdiv{
+    min-height: 88vh;
+  }
+  
+  .login-rightside-headersec > button{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 0.92;
+    letter-spacing: 0.49px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+     padding: 16px 35px 16px 34px;
+    border-radius: 5px;
+    background-color: #0082f1;
+    border: 1px solid transparent;
+  }
+  .login-rightside-headersec > button:focus,
+.login-rightside-headersec > button:active:focus,
+.login-rightside-headersec > button.active:focus,
+.login-rightside-headersec > button.focus,
+.login-rightside-headersec > button:active.focus,
+.login-rightside-headersec > button.active.focus{
+    outline: none;
+  }
+  
+  .login-for-sc-dha:hover {
+    color: #fff !important;
+    text-decoration: none;
+  }
+  .login-icon-as > a > img,
+  .login-icon-ps >a > img {
+    width: 147.4px;
+    height: 43.7px;
+    object-fit: contain;
+  }
+  .login-for-sc {
+    display: none;
+  }
+  .footer-for-sc {
+    display: none;
+  }
+  .footer-ls{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
+  .login-con {
+    position: relative;
+  }
+  .login-headerlogo {
+    margin-bottom: 100px;
+  }
+  .login-forgetpassword{
+    margin-top: 0 !important;
+  }
+
+    /* My Css  */
+
+  .login-leftsidesec{
+    background-image: linear-gradient(208deg, #0082f1 , #1702b4 );
+  } 
+  .login-body > p{
+    color: #fff;
+   }
+.flex-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login-rightside-headersec a {
+  color: #0082f1 !important;
+}
+.login-footer > ul > li > a{
+  color: #000;
+}
+  /* My Css End */
+
+
+
+
+
+           /* Media query css  */
+  @media(max-width:1140px){
+    .login-afterlogotypo > p{
+        margin: 30px 0px 104.8px 1px;
+      }
+      .login-body > p {
+        margin: 9.7px 0px 9.7px 1px;
+      }
+      .login-headerlogo > a > img{
+        width: 80%;
+      }
+      .login-icondiv {
+          text-align: center !important;
+      }
+      .login-icon-as {
+          margin-right: 0 !important;
+          margin-bottom: 1rem;
+      }
+}
+@media (max-width:992px){
+    .login-afterlogotypo > p,
+  .login-body > p {
+    text-align: justify;
+  }
+}
+@media (max-width:768px){
+    .login-icondiv{
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .login-icon-as{
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem;
+      }
+}
+@media (max-width:537px){
+    .login-leftsidesec{
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+      }
+      .login-headerlogo,
+      .login-afterlogotypo > p,
+       .login-body > p,
+       .login-body > h6 {
+        text-align: center;
+      }
+      .login-body > h6 {
+        margin-right: 0 !important;
+      }
+      .login-for-sc {
+        display: block;
+      }
+      .login-for-lc{
+        display: none;
+      }
+      .login-rightsidesec {
+        display: none;
+      }
+      .login-icon-as {
+        display: block !important;
+      }
+      .login-rightside-footersec > ul{
+        padding-left: 0rem;
+      }
+      .login-rightside-footersec > ul > li {
+        display: list-item;
+        margin-top: 0.5rem;
+      }
+      .footer-for-sc {
+        text-align: center !important;
+        margin-top: 2rem;
+      }
+      .login-rightside-footersec > ul > li > a {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .login-for-sc {
+          text-align: center !important;
+      }
+      
+      .login-for-sc-dha {
+        color: #4e5164 !important;
+        margin-right: 0px !important;
+        margin-left: 0px;
+        display: block;
+      }
+      .login-rightside-headersec > button {
+          margin-left: 0 !important;
+      }
+      .login-for-sc {
+          margin-top: 4rem !important;
+      }
+      .login-icondiv {
+          margin-top: 50px !important;
+      }
+      .login-rightside-footersec > ul > li > a {
+        color: #4e5164;
+        font-family: 'Avenir Medium', sans-serif;
+      }
+      .footer-ls {
+        position: relative;
+        text-align: center !important;
+        bottom: inherit;
+        right: inherit;
+        margin-bottom: 2rem;
+      }
+}
+@media (max-width:400px) {
+    .login-for-sc{
+        text-align: center !important;
+      }
+      .login-rightside-headersec > p {
+        margin-right: 0 !important;
+      }
+}
