@@ -136,7 +136,7 @@
                                     <li>Save</li>
                                 </ul>
                             </button>
-                            <button type="button" class="btn btn-close cancelButton">
+                            <button type="button" id="cancelBtn" class="btn btn-close cancelButton">
                                 <ul class="add-cancel-btn">
                                     <li>-</li>
                                     <li> Cancel</li>
@@ -482,7 +482,9 @@
 @endsection
 @push('page_level_scripts')
 <script type="text/javascript">
-
+$("#cancelBtn").click(function () {
+        window.location.href = "{{url('/subadmin/questionnaire')}}";
+    });
     +function ($) {
         'use strict';
 

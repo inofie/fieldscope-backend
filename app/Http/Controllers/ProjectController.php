@@ -53,6 +53,7 @@ class ProjectController extends Controller
         $param = $request->all();
         $param['paginate'] = FALSE;
         $list = Project::getList($param);
+       // dd($list);
 //        pd($list->toArray(),'$list');
 
         $this->__is_paginate = FALSE;
@@ -256,6 +257,7 @@ class ProjectController extends Controller
         $param_rules['company_id'] = 'required|int';
         $param_rules['name'] = 'required|string|max:100';
         $param_rules['address1'] = 'required|string|max:100';
+        $param_rules['address2'] = 'string|max:100';
         $param_rules['assigned_user_id'] = 'required|int';
         $param_rules['user_id'] = 'required|int';
         $param_rules['customer_email'] = 'required|email|max:100';
@@ -274,6 +276,7 @@ class ProjectController extends Controller
         $project->company_id = $request->company_id;
         $project->name = $request->name;
         $project->address1 = $request->address1;
+        $project->address2 = $request->address2;
         $project->assigned_user_id = $request->assigned_user_id;
         $project->user_id = $request->user_id;
         $project->customer_email = $request->customer_email;
@@ -451,6 +454,7 @@ class ProjectController extends Controller
         $param_rules['company_id']       = 'required|int';
         $param_rules['name']             = 'required|string|max:100';
         $param_rules['address1']         = 'required|string|max:100';
+        $param_rules['address2']         = 'string|max:100';
         $param_rules['assigned_user_id'] = 'required|int';
         $param_rules['customer_email']   = 'nullable|email|max:100';
         $param_rules['claim_num']        = 'nullable|string|max:100';
@@ -467,6 +471,7 @@ class ProjectController extends Controller
 
         $project->name = $request->name;
         $project->address1 = $request->address1;
+        $project->address2 = $request->address2;
         $project->assigned_user_id = $request->assigned_user_id;
         $project->customer_email = $request->customer_email;
         $project->claim_num = $request->claim_num;
@@ -524,7 +529,8 @@ class ProjectController extends Controller
 
         $list['states'] = Admin::getStates(['country_id' => 254]);
         $list['inspectors'] = User::where($userWhere)->selectRaw("id, CONCAT(first_name,' ',last_name) AS userNames")->get();
-
+        $list['latest_photos'] = ProjectMedia::getLatestPhotos($request->all());
+        //dd($list);
         $this->__is_ajax = false;
         $this->__is_paginate = false;
         $this->__collection = false;
@@ -556,56 +562,51 @@ class ProjectController extends Controller
 
         /** set data grid output */
 //        To be removed commented on Jan-2023
-//        $records["data"] = [];
-//        if(count(((array) $dataTableRecord['records'])))
-//        {
-//            foreach($dataTableRecord['records'] as $record){
-//                $options  = '<a title="Edit" class="btn btn-sm btn-primary edit_form" href="/"
-//                data-id="'.$record->id.'"><i class="fa fa-edit"></i> </a>';
-//                $options .= '<a title="Delete" style="margin-left:5px;" class="delete_row btn btn-sm btn-danger"
-//                data-module="require_photo" data-id="'.$record->id.'" href="javascript:void(0)"><i class="fa fa-trash"></i> </a>';
-//
-//                $reportPath = public_path(config('constants.PDF_PATH') .'project_report_'. $record->id . '.pdf');
-//                $reportUrl = "";
-//                if(file_exists($reportPath)){
-//                    $reportUrl = (env('BASE_URL').config('constants.PDF_PATH').'project_report_'.$record->id.'.pdf');
-//                }
-//
-//                $placeHolder = env('BASE_URL').'image/placeholder.png';
-//
-//                if(!empty($record->getSingleMedia->image_url)){
-//                    $titleImage = '<img src="'.$record->getSingleMedia->image_url.'" class="img-responsive wd-100 myImg" />';
-//                }else{
-//                    $titleImage = '<img src="'.$placeHolder.'" class="img-responsive wd-100" />';
-//                }
-//
-//                $mediaCount = ProjectMedia::where(['project_id'=> $record->id])->count();
-//
-//
-//                $records["data"][] = [
-//                    'id' => $record->id,
-//                    'image' =>  $titleImage,
-//                    'name' => $record->name.'<br>'.$record->address1,
-//                    'name' => $record->inspect,
-//                    'media_count' => $mediaCount,
-//                    'assigned_user' => $record->assigned_user.'<br> <img src="'.$record->image_url.'" class="img-responsive" style="width:30px;"/>',
-//                    /*'last_crm_sync_at' => $record->last_crm_sync_at,*/
-//                    'report_url' => $reportUrl,
-//                    'created_at' => date('Y-m-d h:i:s A',strtotime($record->created_at)),
-//                ];
-//            }
-//        }
-//
-//
-//
-//
-//
-//
-//        $records["draw"] = (int)$request->input('draw');
-//        $records["recordsTotal"] = $dataTableRecord['total_record'];
-//        $records["recordsFiltered"] = $dataTableRecord['total_record'];
-//
-//        return response()->json($records);
+       $records["data"] = [];
+       if(count(((array) $dataTableRecord['records'])))
+       {
+           foreach($dataTableRecord['records'] as $record){
+               $options  = '<a title="Edit" class="btn btn-sm btn-primary edit_form" href="/"
+               data-id="'.$record->id.'"><i class="fa fa-edit"></i> </a>';
+               $options .= '<a title="Delete" style="margin-left:5px;" class="delete_row btn btn-sm btn-danger"
+               data-module="require_photo" data-id="'.$record->id.'" href="javascript:void(0)"><i class="fa fa-trash"></i> </a>';
+
+               $reportPath = public_path(config('constants.PDF_PATH') .'project_report_'. $record->id . '.pdf');
+               $reportUrl = "";
+               if(file_exists($reportPath)){
+                   $reportUrl = (env('BASE_URL').config('constants.PDF_PATH').'project_report_'.$record->id.'.pdf');
+               }
+
+               $placeHolder = env('BASE_URL').'image/placeholder.png';
+
+               if(!empty($record->getSingleMedia->image_url)){
+                   $titleImage = '<img src="'.$record->getSingleMedia->image_url.'" class="img-responsive wd-100 myImg" />';
+               }else{
+                   $titleImage = '<img src="'.$placeHolder.'" class="img-responsive wd-100" />';
+               }
+
+               $mediaCount = ProjectMedia::where(['project_id'=> $record->id])->count();
+
+
+               $records["data"][] = [
+                   'id' => $record->id,
+                   'image' =>  $titleImage,
+                   'name' => $record->name.'<br>'.$record->address1.'<br>'.$record->address2,
+                   'name' => $record->inspect,
+                   'media_count' => $mediaCount,
+                   'assigned_user' => $record->assigned_user.'<br> <img src="'.$record->image_url.'" class="img-responsive" style="width:30px;"/>',
+                   /*'last_crm_sync_at' => $record->last_crm_sync_at,*/
+                   'report_url' => $reportUrl,
+                   'created_at' => date('Y-m-d h:i:s A',strtotime($record->created_at)),
+               ];
+           }
+       }
+
+       $records["draw"] = (int)$request->input('draw');
+       $records["recordsTotal"] = $dataTableRecord['total_record'];
+       $records["recordsFiltered"] = $dataTableRecord['total_record'];
+       //dd($records);
+       return response()->json($records);
     }
 
     public function projectDatatable(Request $request)
@@ -655,7 +656,7 @@ class ProjectController extends Controller
                 $records["data"][] = [
                     'id' => $record->id,
                     'image' =>  $titleImage,
-                    'name' => $record->name.'<br>'.$record->address1,
+                    'name' => $record->name.'<br>'.$record->address1.'<br>'.$record->address2,
                     'media_count' => $mediaCount,
                     'assigned_user' => $record->assigned_user.'<br> <img src="'.$record->image_url.'" class="img-responsive" style="width:30px;"/>',
                     /*'last_crm_sync_at' => $record->last_crm_sync_at,*/
@@ -685,6 +686,7 @@ class ProjectController extends Controller
         $param_rules['company_id'] = 'required|int';
         $param_rules['name'] = 'required|string|max:100';
         $param_rules['address1'] = 'required|string|max:100';
+        $param_rules['address2'] = 'string|max:100';
         $param_rules['assigned_user_id'] = 'required|int';
         $param_rules['user_id'] = 'required|int';
         $param_rules['customer_email'] = 'nullable|email|max:100';
@@ -712,6 +714,7 @@ class ProjectController extends Controller
         $project->company_id        = $request->company_id;
         $project->name              = $request->name;
         $project->address1          = $request->address1;
+        $project->address2          = $request->address2;
         $project->assigned_user_id  = $request->assigned_user_id;
         $project->user_id           = $request->user_id;
         $project->customer_email    = $request->customer_email;
@@ -788,6 +791,7 @@ class ProjectController extends Controller
         $param_rules['company_id'] = 'required|int';
         $param_rules['name']    = 'required|string|max:100';
         $param_rules['address1'] = 'required|string|max:100';
+        $param_rules['address2'] = 'string|max:100';
         $param_rules['assigned_user_id'] = 'required|int';
         $param_rules['user_id'] = 'required|int';
         $param_rules['claim_num'] = 'nullable|string|max:100';
@@ -815,6 +819,7 @@ class ProjectController extends Controller
         $project->company_id = $request->company_id;
         $project->name = $request->name;
         $project->address1 = $request->address1;
+        $project->address2 = $request->address2;
         $project->assigned_user_id = $request->assigned_user_id;
         $project->claim_num = $request->claim_num;
 //        $project->inspection_date = date('Y-m-d ', strtotime($request->inspection_date));
@@ -1871,7 +1876,7 @@ class ProjectController extends Controller
     {
 
         $mapPath = public_path("uploads/map/map_{$projectId}.jpg");
-        $res = copy("https://maps.googleapis.com/maps/api/staticmap?zoom=18&size=800x443&maptype=satellite&markers=color:red|label:location|$lat,$long&key=AIzaSyBZQ1t324PakL-ZvqNCymzRlfroEV2ig3o", $mapPath);
+        $res = copy("https://maps.googleapis.com/maps/api/staticmap?zoom=18&size=800x443&maptype=satellite&markers=color:red|label:location|$lat,$long&key=AIzaSyAlUlyus8U80FZOXPzVHEeVEYHcJHsOrjU", $mapPath);
         if(!$res){
             die('map failed');
         }

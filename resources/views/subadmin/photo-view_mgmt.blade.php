@@ -266,7 +266,7 @@
                                  style="margin-top:-10px;">
                                 <!-- <label>Inspections Areas</label> -->
                                 <select name="parent_id" id="sel1" class="select2">
-                                    <option selected disabled> Inspection Areas</option>
+                                    <option selected disabled> Inspection Area</option>
                                     @foreach($data['area'] AS $item)
                                         <option value="{{$item['id']}}">{{$item['name']}}</option>
                                     @endforeach
@@ -278,7 +278,7 @@
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified ">
                             <!-- <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label> -->
-                                <select name="thumbnail" class="select2" data-placeholder="Default Thumbnail"
+                                <select name="thumbnail" class="select2" data-placeholder="Thumbnail"
                                         @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Default
                                         Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>

@@ -81,258 +81,9 @@
 
                     <div class="row new-card-row" id="project_grid">
 
-<div style="display: none;">
-    <div class="col-md-4">
-        <div class="card-body">
-            <div class="card-header">
-                <ul class="new-card address-icon">
-                    <li><h1>Kelly Lewis</h1></li>
-                    <li>
-                        <a href="{{URL::to('subadmin/project/edit-project',['id'=>1])}}"><i
-                                    class="fa fa-pen pl-1"></i></a>
-                    </li>
-                </ul>
-                <ul>
 
-                    <li>
-                        <ul class="address-icon">
-                            <li><p>16433 Agnes St Gardner, KS 66030</p></li>
-                            <li class="address-icon"><img
-                                        src="{{asset('assets/images/calender-icon.png')}}"
-                                        alt="...">
-                                <p>2 months ago, <span>06:00pm</span></p></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-img">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-            </div>
-            <div class="card-footer">
-                <ul>
-                    <li><span>Assigned To</span></li>
-                    <li><p>Paul Lewis</p></li>
-                </ul>
-                <ul>
-                    <li><span>Inspection Date</span></li>
-                    <li><p>10/06/2021</p></li>
-                </ul>
-                <ul>
-                    <li><span>Claim #</span></li>
-                    <li><p>1234567890</p></li>
-                </ul>
-                <ul>
-                    <li><span>Email</span></li>
-                    <li><p>kelly@test12.com</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card-body">
-            <div class="card-header">
-                <ul class="new-card address-icon">
-                    <li><h1>Kelly Lewis</h1></li>
-                    <li><i class="fa fa-pen pl-1" title="Edit Project"></i></li>
-                </ul>
-                <ul >
-
-                    <li>
-                        <ul class="address-icon">
-                            <li><p>16433 Agnes St Gardner, KS 66030</p></li>
-                            <li class="address-icon"><img src="{{asset('assets/images/calender-icon.png')}}" alt="..."><p>2 months ago, <span>06:00pm</span></p></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-img">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-            </div>
-            <div class="card-footer">
-                <ul>
-                    <li><span>Assigned To</span></li>
-                    <li><p>Paul Lewis</p></li>
-                </ul>
-                <ul>
-                    <li><span>Inspection Date</span></li>
-                    <li><p>10/06/2021</p></li>
-                </ul>
-                <ul>
-                    <li><span>Claim #</span></li>
-                    <li><p>1234567890</p></li>
-                </ul>
-                <ul>
-                    <li><span>Email</span></li>
-                    <li><p>kelly@test12.com</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card-body">
-            <div class="card-header">
-                <ul class="new-card address-icon">
-                    <li><h1>Kelly Lewis</h1></li>
-                    <li><i class="fa fa-pen pl-1" title="Edit Project"></i></li>
-                </ul>
-                <ul >
-
-                    <li>
-                        <ul class="address-icon">
-                            <li><p>16433 Agnes St Gardner, KS 66030</p></li>
-                            <li class="address-icon"><img src="{{asset('assets/images/calender-icon.png')}}" alt="..."><p>2 months ago, <span>06:00pm</span></p></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-img">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-            </div>
-            <div class="card-footer">
-                <ul>
-                    <li><span>Assigned To</span></li>
-                    <li><p>Paul Lewis</p></li>
-                </ul>
-                <ul>
-                    <li><span>Inspection Date</span></li>
-                    <li><p>10/06/2021</p></li>
-                </ul>
-                <ul>
-                    <li><span>Claim #</span></li>
-                    <li><p>1234567890</p></li>
-                </ul>
-                <ul>
-                    <li><span>Email</span></li>
-                    <li><p>kelly@test12.com</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card-body">
-            <div class="card-header">
-                <ul class="new-card address-icon">
-                    <li><h1>Kelly Lewis</h1></li>
-                    <li><i class="fa fa-pen pl-1" title="Edit Project"></i></li>
-                </ul>
-                <ul >
-
-                    <li>
-                        <ul class="address-icon">
-                            <li><p>16433 Agnes St Gardner, KS 66030</p></li>
-                            <li class="address-icon"><img src="{{asset('assets/images/calender-icon.png')}}" alt="..."><p>2 months ago, <span>06:00pm</span></p></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-img">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-            </div>
-            <div class="card-footer">
-                <ul>
-                    <li><span>Assigned To</span></li>
-                    <li><p>Paul Lewis</p></li>
-                </ul>
-                <ul>
-                    <li><span>Inspection Date</span></li>
-                    <li><p>10/06/2021</p></li>
-                </ul>
-                <ul>
-                    <li><span>Claim #</span></li>
-                    <li><p>1234567890</p></li>
-                </ul>
-                <ul>
-                    <li><span>Email</span></li>
-                    <li><p>kelly@test12.com</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card-body">
-            <div class="card-header">
-                <ul class="new-card address-icon">
-                    <li><h1>Kelly Lewis</h1></li>
-                    <li><i class="fa fa-pen pl-1" title="Edit Project"></i></li>
-                </ul>
-                <ul >
-
-                    <li>
-                        <ul class="address-icon">
-                            <li><p>16433 Agnes St Gardner, KS 66030</p></li>
-                            <li class="address-icon"><img src="{{asset('assets/images/calender-icon.png')}}" alt="..."><p>2 months ago, <span>06:00pm</span></p></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-img">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-            </div>
-            <div class="card-footer">
-                <ul>
-                    <li><span>Assigned To</span></li>
-                    <li><p>Paul Lewis</p></li>
-                </ul>
-                <ul>
-                    <li><span>Inspection Date</span></li>
-                    <li><p>10/06/2021</p></li>
-                </ul>
-                <ul>
-                    <li><span>Claim #</span></li>
-                    <li><p>1234567890</p></li>
-                </ul>
-                <ul>
-                    <li><span>Email</span></li>
-                    <li><p>kelly@test12.com</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card-body">
-            <div class="card-header">
-                <ul class="new-card address-icon">
-                    <li><h1>Kelly Lewis</h1></li>
-                    <li><i class="fa fa-pen pl-1" title="Edit Project"></i></li>
-                </ul>
-                <ul >
-
-                    <li>
-                        <ul class="address-icon">
-                            <li><p>16433 Agnes St Gardner, KS 66030</p></li>
-                            <li class="address-icon"><img src="{{asset('assets/images/calender-icon.png')}}" alt="..."><p>2 months ago, <span>06:00pm</span></p></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-img">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-            </div>
-            <div class="card-footer">
-                <ul>
-                    <li><span>Assigned To</span></li>
-                    <li><p>Paul Lewis</p></li>
-                </ul>
-                <ul>
-                    <li><span>Inspection Date</span></li>
-                    <li><p>10/06/2021</p></li>
-                </ul>
-                <ul>
-                    <li><span>Claim #</span></li>
-                    <li><p>1234567890</p></li>
-                </ul>
-                <ul>
-                    <li><span>Email</span></li>
-                    <li><p>kelly@test12.com</p></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12" id="project_page_controls"></div>
-                    </div>
+                   
                 </div>
         <!-- New Work  End -->
 
@@ -381,121 +132,14 @@
 
 
 {{--    Grid     --}}
-<div class="content container hide">
-    <div class="row nomargin pm-maincon-modified" id="__project_grid">
 
-        <div class="col-md-3 pm-col-modified">
-            <div class="thumbnail pm-thumbnail-modified">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-                <div class="caption pm-caption-modified">
-                    <div class="pm-captionheader-modified">
-                        <h3>PROJECT NAME</h3>
-                        <a >Open</a>
-                        <a class="num-modified">20</a>
-                    </div>
-                    <p>16433 Agnes St Gardner, KS 66030</p>
-                    <div class="pm-caption-bottom">
-                        <div>
-                            <p >Inspector:<span>Paul Lewis</span></p>
-                        </div>
-                        <div>
-                            <p >Submitted Date:<span>10/06/2021</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="row nomargin pm-maincon-modified" id="__project_grid">
     </div>
     <div class="row nomargin pm-maincon-modified" >
         <div class="col-md-12 col-sm-12 col-xs-12" id="project_page_controls"></div>
     </div>
 
-        <div class="col-md-3 pm-col-modified hide">
-            <div class="thumbnail pm-thumbnail-modified">
-                <img src="{{asset('assets/images/pm-mapimg.jpg')}}" alt="...">
-                <div class="caption pm-caption-modified">
-                    <div class="pm-captionheader-modified">
-                        <h3>PROJECT NAME</h3>
-                        <a >Open</a>
-                        <a class="num-modified">20</a>
-                    </div>
-                    <p>16433 Agnes St Gardner, KS 66030</p>
-                    <div class="pm-caption-bottom">
-                        <div>
-                            <p >Inspector:<span>Paul Lewis</span></p>
-                        </div>
-                        <div>
-                            <p >Submitted Date:<span>10/06/2021</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 pm-col-modified hide">
-            <div class="thumbnail pm-thumbnail-modified">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-                <div class="caption pm-caption-modified">
-                    <div class="pm-captionheader-modified">
-                        <h3>PROJECT NAME</h3>
-                        <a >Open</a>
-                        <a class="num-modified">20</a>
-                    </div>
-                    <p>16433 Agnes St Gardner, KS 66030</p>
-                    <div class="pm-caption-bottom">
-                        <div>
-                            <p >Inspector:<span>Paul Lewis</span></p>
-                        </div>
-                        <div>
-                            <p >Submitted Date:<span>10/06/2021</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 pm-col-modified hide">
-            <div class="thumbnail pm-thumbnail-modified">
-                <img src="{{asset('assets/images/pm-mapimg.jpg')}}" alt="...">
-                <div class="caption pm-caption-modified">
-                    <div class="pm-captionheader-modified">
-                        <h3>PROJECT NAME</h3>
-                        <a >Open</a>
-                        <a class="num-modified">20</a>
-                    </div>
-                    <p>16433 Agnes St Gardner, KS 66030</p>
-                    <div class="pm-caption-bottom">
-                        <div>
-                            <p >Inspector:<span>Paul Lewis</span></p>
-                        </div>
-                        <div>
-                            <p >Submitted Date:<span>10/06/2021</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 pm-col-modified hide">
-            <div class="thumbnail pm-thumbnail-modified">
-                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
-                <div class="caption pm-caption-modified">
-                    <div class="pm-captionheader-modified">
-                        <h3>PROJECT NAME</h3>
-                        <a >Open</a>
-                        <a class="num-modified">20</a>
-                    </div>
-                    <p>16433 Agnes St Gardner, KS 66030</p>
-                    <div class="pm-caption-bottom">
-                        <div>
-                            <p >Inspector:<span>Paul Lewis</span></p>
-                        </div>
-                        <div>
-                            <p >Submitted Date:<span>10/06/2021</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
 <div class="row nomargin hide">
   <div class="col-md-12 col-sm-12 col-xs-12">
      <table class="table table-striped" id="example">
@@ -539,9 +183,15 @@
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified address-group">
                             <!-- <label>Address Lane 1</label> -->
-                            <input name="address1" id="add_address1" type="text"  placeholder="Address" autocomplete="off">
+                            <input name="address1" id="add_address1" type="text"  placeholder="Address 1" autocomplete="off">
                             <input name="lat" type="hidden" >
                             <input name="long" type="hidden" >
+                        </div>
+
+                        <div class="col-md-12 companyinfobody rm-companyinfobody-modified address-group">
+                            <!-- <label>Address Lane 1</label> -->
+                            <input name="address2" id="add_address2" type="text"  placeholder="Address 2" autocomplete="off">
+                         
                         </div>
 
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
@@ -695,11 +345,14 @@
                         <input name="name" type="text"  placeholder="Project Name">
                     </div>
                     <div class="col-md-12 companyinfobody rm-companyinfobody-modified form-group">
-                        <input name="address1" id="update_address1" type="text" placeholder="Address" autocomplete="off">
+                        <input name="address1" id="update_address1" type="text" placeholder="Address 1" autocomplete="off">
                         <input name="lat" type="hidden" >
                         <input name="long" type="hidden" >
                     </div>
-
+                    <div class="col-md-12 companyinfobody rm-companyinfobody-modified form-group">
+                        <input name="address2" id="update_address2" type="text" placeholder="Address 2" autocomplete="off">
+                       
+                    </div>
                     <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
                         <input name="customer_email" type="text" class="input" placeholder="Customer Email">
                     </div>
@@ -1019,7 +672,7 @@
 
                         $('#update_form input[name="name"]').val(response.data.name);
                         $('#update_form input[name="address1"]').val(response.data.address1);
-                        // $('#update_form input[name="address2"]').val(response.data.address2);
+                        $('#update_form input[name="address2"]').val(response.data.address2);
                         // $('#update_form input[name="postal_code"]').val(response.data.postal_code);
                         $('#update_form input[name="claim_num"]').val(response.data.claim_num);
                         $('#update_form input[name="customer_email"]').val(response.data.customer_email);
@@ -1135,7 +788,7 @@
                 let grid = "";
                 params.forEach((element,index) => {
 
-                    let substr =element.address1.length > 35 ? element.address1.substring(0, 35)+' ...' : element.address1;
+                    // let substr =element.address1.length > 35 ? element.address1.substring(0, 35)+' ...' : element.address1;
                     // "http://127.0.0.1:8000/uploads/media/1631144783457-1631145186-106830256.jpg"
 
                     // assets/images/pm-cardimg.png
@@ -1207,7 +860,7 @@
                                             <li>
                                                 <ul class="address-icon">
                                                     <li><p data-toggle="tooltip"
-                                                           title="${element.address1}">${substr}</p></li>
+                                                       
                                                     <li class="address-icon"><img
                                                                 src="{{asset('assets/images/calender-icon.png')}}"
                                                                 alt="...">
@@ -1264,6 +917,6 @@
 
         });
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_PLACES_KEY')}}&libraries=places&callback=initAutocomplete&v=3.50" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlUlyus8U80FZOXPzVHEeVEYHcJHsOrjU&libraries=places&callback=initAutocomplete&v=3.50" async defer></script>
 @endpush
 

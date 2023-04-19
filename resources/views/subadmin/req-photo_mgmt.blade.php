@@ -335,7 +335,7 @@
                         <table class="table table-striped re-table" id="example" style="width:100%;">
                             <thead >
                             <tr class="table-head">
-                                <th class="left w-20">Inspection Area</th>
+                                <th class="left w-20">Photo View</th>
                                 <th class="center w-20">Type</th>
                                 <th class="center w-20">User Type</th>
                                 <th class="center w-20">Min. Quantity</th>
@@ -452,23 +452,27 @@
                         <div class="row ">
                             <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
                                 <!-- <label>Required Photo</la -->
-                                <input name="name" type="text"  placeholder="Required Photo">
+                                <input name="name" type="text"  placeholder="Photo View">
                             </div>
                             @if(!empty($data['companyGroups']))
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified" style="margin-bottom: 10px;">
                                     <!-- <label>User Type</label> -->
 
-                                    <select name="company_group_id[]" class="select2" style="font-size: 20px;" multiple>
+                                    <select name="company_group_id[]" data-placeholder="User Type" class="select2" style="font-size: 20px;" multiple>
                                         @foreach($data['companyGroups'] AS $key => $item)
                                             <option value="{{$item->id}}">{{$item->title}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             @endif
+                            <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                                <!-- <label>Min Quantity</label> -->
+                                <input name="min_quantity" type="text"  placeholder="| Qty" class="quantity-input">
+                            </div>
 
-                            <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified">
+                            <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified">
                             <!-- <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label> -->
-                                <select name="thumbnail"  class="select2" data-placeholder="Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif"  @if($data['thumbnailCount'] > 0) disabled @endif>
+                                <select name="thumbnail"  class="select2" data-placeholder="Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif"  @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>
                                     <option value="1">Yes</option>
                                     <option value="0">No</option>
@@ -476,10 +480,7 @@
                             </div>
 
 
-                            <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Min Quantity</label> -->
-                                <input name="min_quantity" type="text"  placeholder="Quantity">
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="modal-footer logoimagefooter">

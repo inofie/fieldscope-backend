@@ -461,7 +461,7 @@
                                 <button type="submit" class="btn btn-save bg-modified">
                                     <ul class="add-cancel-btn">
                                         <li>+</li>
-                                        <li>Save</li>
+                                        <li>Confirm</li>
                                     </ul>
                                 </button>
                         </div>
@@ -545,7 +545,7 @@
                           <button type="submit" class="btn btn-save bg-modified">
                                 <ul class="add-cancel-btn">
                                         <li>+</li>
-                                        <li>Save</li>
+                                        <li>Confirm</li>
                                     </ul>
                             </button>
                     </div>
@@ -636,7 +636,7 @@
                         <div class="form-group cover_image pen-cover-img @if(!empty($report->report_cover_image)) {{"hide"}} @endif">
                            
                             <div class="form-group setting-from-group">
-                                    <label for="file">choose a file</label>
+                                    <label for="file">Cover Image</label>
                                         <input id="file" class="form-control input-filke" type="file" placeholder="Cover Image" name="cover_image" />
                                     </div>
 {{--                            <img src="{{asset('assets/images/edit-pen-img.png')}}" alt="...">--}}
@@ -675,7 +675,7 @@
                             <button type="submit" class="btn btn-save bg-modified">
                                 <ul class="add-cancel-btn">
                                     <li>+</li>
-                                    <li>Save</li>
+                                    <li>Confirm</li>
                                 </ul>
                             </button>
                     </div>
@@ -711,8 +711,18 @@
                     </div>
                 </div>
                 <div class="modal-footer logoimagefooter">
-                    <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-save bg-modified">Confirm</button>
+                    <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">
+                    <ul class="add-cancel-btn">
+                                        <li>-</li>
+                                        <li> Cancel</li>
+                                    </ul>
+                        </button>
+                    <button type="submit" class="btn btn-save bg-modified">
+                                    <ul class="add-cancel-btn">
+                                        <li>+</li>
+                                        <li>Confirm</li>
+                                    </ul>
+                                </button>
                 </div>
             </div>
         </form>
@@ -788,7 +798,7 @@
                             <button type="submit" class="btn btn-save bg-modified">
                                 <ul class="add-cancel-btn">
                                     <li>+</li>
-                                    <li>Save</li>
+                                    <li>Confirm</li>
                                 </ul>
                             </button>
                     </div>
@@ -931,8 +941,17 @@
                         </div>
                     </div>
                     <div class="modal-footer logoimagefooter">
-                        <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-save bg-modified ">Confirm</button>
+                        <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">
+                                <ul class="add-cancel-btn">
+                                        <li>-</li>
+                                        <li> Cancel</li>
+                                    </ul></button>
+                        <button type="submit" class="btn btn-save bg-modified ">
+                        <ul class="add-cancel-btn">
+                                        <li>+</li>
+                                        <li>Confirm</li>
+                                    </ul>
+                        </button>
                     </div>
                 </div>
             </form>
@@ -956,9 +975,9 @@
                 <div class="modal-body  uploadpdffilemodalbody company-intoduction-modal">
 
                     <div class="row">
-                        <div class="col-md-12 rm-companyinfobody-modified">
+                        <!-- <div class="col-md-12 rm-companyinfobody-modified">
                             <input value="{{ !empty($introductions->title) ? $introductions->title : null }}"  type="text" class="form-control" id="intro_title" name="title" placeholder="Title" />
-                        </div>
+                        </div> -->
 <!--                         <div class="form-group col-md-2 text-right">
                             <button type="button" class="btn add_new " style="background-color: #00ADE7; color: white" >Add New</button>
                         </div> -->
@@ -1006,7 +1025,7 @@
                        <button type="submit" class="btn btn-save bg-modified">
                             <ul class="add-cancel-btn">
                                <li>+</li>
-                               <li>Save</li>
+                               <li>Confirm</li>
                             </ul>
                         </button>
                     </div>
@@ -1079,7 +1098,7 @@
                         <button type="submit" class="btn btn-save bg-modified">
                                 <ul class="add-cancel-btn">
                                         <li>+</li>
-                                        <li>Save</li>
+                                        <li>Confirm</li>
                                 </ul>
                         </button>
                     </div>
@@ -1139,7 +1158,7 @@
                                 <button type="submit" class="btn btn-save bg-modified">
                                     <ul class="add-cancel-btn">
                                         <li>+</li>
-                                        <li>Save</li>
+                                        <li>Confirm</li>
                                     </ul>
                                 </button>
                         </div>
