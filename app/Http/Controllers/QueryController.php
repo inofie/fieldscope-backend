@@ -208,9 +208,9 @@ class QueryController extends Controller
             } else {
                 /** IF checkbox and radio */
 
-                if(in_array('N/A',$options)){
-                    $query['photo_view_id'] = !empty($request['photo_view']) ? $request['photo_view']: NULL ;
-                }
+                
+                $query['photo_view_id'] = !empty($request['photo_view']) ? $request['photo_view']: NULL ;
+                
                 $query['options'] = trim(implode(',', $options), ' ,');
 
                 if(empty($query['options'])){
@@ -219,7 +219,7 @@ class QueryController extends Controller
                     return $this->__sendError('Required Options Missing.', [], 400);
                 }
             }
-
+            //dd($query);
 
         \Log::debug("$query: ".print_r($query,1));
             $query = Query::create($query);
