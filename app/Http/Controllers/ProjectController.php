@@ -21,7 +21,7 @@ use Intervention\Image\Facades\Image;
 
 class ProjectController extends Controller
 {
- 
+
     function __construct()
     {
         ini_set('max_execution_time', 0); //300 seconds = 5 minutes
@@ -555,6 +555,7 @@ class ProjectController extends Controller
         $params['keyword'] = $request['keyword'];
 
         $dataTableRecord = Project::getCompanyProjectsGrid($params);
+        // dd($dataTableRecord);
 //        p($dataTableRecord['records'],'$dataTableRecord');
 //        dd('$records',$dataTableRecord);
 
@@ -598,6 +599,7 @@ class ProjectController extends Controller
                    /*'last_crm_sync_at' => $record->last_crm_sync_at,*/
                    'report_url' => $reportUrl,
                    'created_at' => date('Y-m-d h:i:s A',strtotime($record->created_at)),
+                   'inspection_date' => date('Y-m-d h:i:s A',strtotime($record->inspection_date)),
                ];
            }
        }
@@ -631,9 +633,9 @@ class ProjectController extends Controller
         if(count(((array) $dataTableRecord['records'])))
         {
             foreach($dataTableRecord['records'] as $record){
-                $options  = '<a title="Edit" class="btn btn-sm btn-primary edit_form" href="/"  
+                $options  = '<a title="Edit" class="btn btn-sm btn-primary edit_form" href="/"
                 data-id="'.$record->id.'"><i class="fa fa-edit"></i> </a>';
-                $options .= '<a title="Delete" style="margin-left:5px;" class="delete_row btn btn-sm btn-danger" 
+                $options .= '<a title="Delete" style="margin-left:5px;" class="delete_row btn btn-sm btn-danger"
                 data-module="require_photo" data-id="'.$record->id.'" href="javascript:void(0)"><i class="fa fa-trash"></i> </a>';
 
                 $reportPath = public_path(config('constants.PDF_PATH') .'project_report_'. $record->id . '.pdf');
@@ -694,7 +696,7 @@ class ProjectController extends Controller
         $param_rules['sales_tax'] = 'nullable|numeric|min:1';
         $param_rules['lat'] = 'required|numeric';
         $param_rules['long'] = 'required|numeric';
-//        $param_rules['inspection_date'] = 'required|date_format:Y-m-d|after:tomorrow';
+        // $param_rules['inspection_date'] = 'nullable|date_format:Y-m-d|after:tomorrow';
 //        $param_rules['latitude'] = 'required|string|max:100';
 //        $param_rules['longitude'] = 'required|string|max:100';
 
@@ -813,7 +815,7 @@ class ProjectController extends Controller
         }
         //</editor-fold>
 
-        
+
         $project = new Project();
         $project = $project::find($id);
         $project->company_id = $request->company_id;
@@ -906,7 +908,7 @@ class ProjectController extends Controller
         $this->__is_collection = false;
         return $this->__sendResponse('Project', $list, 200, 'Project deleted successfully.');
     }
-  
+
     public function saveSignature(Request $request)
     {
 //        echo '<pre>'; print_r($request->all()); exit;
@@ -933,7 +935,7 @@ class ProjectController extends Controller
             }
         }
     }
-  
+
     public function storeComplete(Request $request)
     {
         $param_rules['project'] = 'required|string';
@@ -1272,13 +1274,13 @@ class ProjectController extends Controller
             <table>
             <tr>
                     <td><h1>SIGN TEST FILE</h1></td>
-                    
-                    
+
+
                 </tr>
                 <tr>
                     <td>TEST</td>
                     <td><input type="text" placeholder="Sign this" name="sign"/></td>
-                    
+
                 </tr>
             </table>
         ');

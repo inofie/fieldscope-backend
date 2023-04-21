@@ -83,7 +83,7 @@
 
 
                     </div>
-                   
+
                 </div>
         <!-- New Work  End -->
 
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div> -->
-            </div>  
+            </div>
 
         </div>
     </div>
@@ -255,7 +255,7 @@
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified address-group">
                             <!-- <label>Address Lane 1</label> -->
                             <input name="address2" id="add_address2" type="text"  placeholder="Address 2" autocomplete="off">
-                         
+
                         </div>
 
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
@@ -274,7 +274,7 @@
 
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
                             <!-- <label>Sales Tax aaaa</label> -->
-                            <input  type="text" class="input date-picker" placeholder="Inspection Date">
+                            <input name="inspection_date"  class="input disableFuturedate"  placeholder="Date" type ="date">
                         </div>
 
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
@@ -415,7 +415,7 @@
                     </div>
                     <div class="col-md-12 companyinfobody rm-companyinfobody-modified form-group">
                         <input name="address2" id="update_address2" type="text" placeholder="Address 2" autocomplete="off">
-                       
+
                     </div>
                     <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
                         <input name="customer_email" type="text" class="input" placeholder="Customer Email">
@@ -472,7 +472,7 @@
 
     <script type="text/javascript">
 
-        $(".date-picker").datepicker();
+
 
         function initAutocomplete(){
             let addressInput = $('input[name="address1"]');
@@ -581,19 +581,6 @@
                 renderGrid();
             });
 
-            $('input[name="inspection_date"]').on('focusout', function () {
-                var d = new Date();
-                var month = d.getMonth() + 1;
-                var day = d.getDate();
-                var output = d.getFullYear() + '-' +
-                    (('' + month).length < 2 ? '0' : '') + month + '-' +
-                    (('' + day).length < 2 ? '0' : '') + day;
-
-                if (output > $(this).val()) {
-                    $(this).val('');
-                    alert("Inspection date can't be earlier than " + output);
-                }
-            });
 
             var selectedCItyId = '';
 
@@ -852,7 +839,7 @@
                 let grid = "";
                 params.forEach((element,index) => {
 
-                    // let substr =element.address1.length > 35 ? element.address1.substring(0, 35)+' ...' : element.address1;
+                    let substr =element.address1.length > 35 ? element.address1.substring(0, 35)+' ...' : element.address1;
                     // "http://127.0.0.1:8000/uploads/media/1631144783457-1631145186-106830256.jpg"
 
                     // assets/images/pm-cardimg.png
@@ -924,7 +911,7 @@
                                             <li>
                                                 <ul class="address-icon">
                                                     <li><p data-toggle="tooltip"
-                                                       
+                                                    title="${element.address1}">${substr}</p></li>
                                                     <li class="address-icon"><img
                                                                 src="{{asset('assets/images/calender-icon.png')}}"
                                                                 alt="...">
@@ -979,6 +966,23 @@
                 }
             }
 
+        });
+
+        $(document).ready(function () {
+            var currentDate = new Date();
+            $('.disableFuturedate').datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose:true,
+            startDate: "currentDate",
+            minDate: currentDate
+            }).on('changeDate', function (ev) {
+            $(this).datepicker('hide');
+            });
+            $('.disableFuturedate').keyup(function () {
+            if (this.value.match(/[^0-9]/g)) {
+                this.value = this.value.replace(/[^0-9^-]/g, '');
+            }
+            });
         });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlUlyus8U80FZOXPzVHEeVEYHcJHsOrjU&libraries=places&callback=initAutocomplete&v=3.50" async defer></script>
