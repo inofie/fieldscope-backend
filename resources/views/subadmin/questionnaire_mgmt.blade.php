@@ -8,7 +8,7 @@
             <div class="card-title">
                 <h1 class="main-heading">Questionnaire Management</h1>
                 <div class="buttons">
-                        <button type="button" class="btn add-btn btn-add addusertype-btn-modified import-btn" data-toggle="modal" data-target="#myModal">
+                        <!-- <button type="button" class="btn add-btn btn-add addusertype-btn-modified import-btn" data-toggle="modal" data-target="#myModal">
                                 <ul class="d-flex align-items-center">
                                     <li>
                                     <img src="{{asset('assets/images/filter-icon.png')}}" alt="...">
@@ -17,7 +17,7 @@
                                            Filter
                                     </li>
                                 </ul>
-                        </button>
+                        </button> -->
                         <a href="{{ URL::to('subadmin/questionnaire/add') }}" class="btn add-btn btn-add">
                                 <ul class="d-flex align-items-center">
                                     <li>

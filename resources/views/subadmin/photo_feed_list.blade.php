@@ -33,10 +33,7 @@
                         <div class="col-md-12">
                                 <div class="card-title-photo-feed">
                                     <h1 >Photo Feed</h1>
-                                    <ol class="breadcrumb">
-                                        <li><a href="#" class="active">Pre-Inspection Photos</a></li>
-                                        <li><a href="#"> Front Elevation</a></li>
-                                    </ol>
+                                    
                                 </div>
                             </div>
                     </div>
