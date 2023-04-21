@@ -134,11 +134,75 @@
 {{--    Grid     --}}
 
     <div class="row nomargin pm-maincon-modified" id="__project_grid">
+
     </div>
     <div class="row nomargin pm-maincon-modified" >
         <div class="col-md-12 col-sm-12 col-xs-12" id="project_page_controls"></div>
     </div>
 
+        <div class="col-md-3 pm-col-modified hide">
+            <div class="thumbnail pm-thumbnail-modified">
+                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
+                <div class="caption pm-caption-modified">
+                    <div class="pm-captionheader-modified">
+                        <h3>PROJECT NAME</h3>
+                        <a >Open</a>
+                        <a class="num-modified">20</a>
+                    </div>
+                    <p>16433 Agnes St Gardner, KS 66030</p>
+                    <div class="pm-caption-bottom">
+                        <div>
+                            <p >Inspector:<span>Paul Lewis</span></p>
+                        </div>
+                        <div>
+                            <p >Submitted Date:<span>10/06/2021</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 pm-col-modified hide">
+            <div class="thumbnail pm-thumbnail-modified">
+                <img src="{{asset('assets/images/pm-mapimg.jpg')}}" alt="...">
+                <div class="caption pm-caption-modified">
+                    <div class="pm-captionheader-modified">
+                        <h3>PROJECT NAME</h3>
+                        <a >Open</a>
+                        <a class="num-modified">20</a>
+                    </div>
+                    <p>16433 Agnes St Gardner, KS 66030</p>
+                    <div class="pm-caption-bottom">
+                        <div>
+                            <p >Inspector:<span>Paul Lewis</span></p>
+                        </div>
+                        <div>
+                            <p >Submitted Date:<span>10/06/2021</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 pm-col-modified hide">
+            <div class="thumbnail pm-thumbnail-modified">
+                <img src="{{asset('assets/images/pm-cardimg.png')}}" alt="...">
+                <div class="caption pm-caption-modified">
+                    <div class="pm-captionheader-modified">
+                        <h3>PROJECT NAME</h3>
+                        <a >Open</a>
+                        <a class="num-modified">20</a>
+                    </div>
+                    <p>16433 Agnes St Gardner, KS 66030</p>
+                    <div class="pm-caption-bottom">
+                        <div>
+                            <p >Inspector:<span>Paul Lewis</span></p>
+                        </div>
+                        <div>
+                            <p >Submitted Date:<span>10/06/2021</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 <div class="row nomargin hide">
   <div class="col-md-12 col-sm-12 col-xs-12">

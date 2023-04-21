@@ -14,7 +14,8 @@
 				<!-- </a> -->
 			</div>
 			<div class="search-input">
-				<input type="text" name="search" id="search" placeholder="Search Projects" />
+			<input value="" id="search-input" name="keyword" type="text" class="form-control" placeholder="Search Projects">
+			
 				<img src="{{asset('image/search-icon.png')}}" class="img-responsive"/>
 			</div>
 			<ul class="nav navbar-nav navbar-modified ms-auto navigation " >

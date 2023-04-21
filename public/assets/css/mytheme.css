@@ -179,8 +179,8 @@ ul {
 /* #search-btn:focus{
 	background:transparent !important;
 } */
-#search-input {
-    padding: 20px;
+#search-inputs {
+   
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     box-shadow: none !important;
@@ -188,7 +188,7 @@ ul {
 }
 
 #search-input:focus {
-    border-right: 0px;
+    border-right: 10px;
 }
 
 .search-btn .fa-search {
