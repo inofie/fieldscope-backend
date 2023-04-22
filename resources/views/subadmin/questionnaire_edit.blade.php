@@ -276,7 +276,7 @@
                     </div>
                     <div class="modal-footer footer-close-button">
                         <div class="add-cancel-bnt">
-                            <button type="button" class="btn btn-save bg-modified" data-dismiss="modal">
+                            <button type="button" onclick="window.location='{{ url("subadmin/questionnaire") }}'" class="btn btn-save bg-modified">
                                 <ul class="add-cancel-btn">
                                     <li>×</li>
                                     <li>Close</li>
@@ -362,6 +362,7 @@
 @push('page_level_scripts')
     <script type="text/javascript">
 $("#cancelBtn").click(function () {
+    //alert(aa);
         window.location.href = "{{url('/subadmin/questionnaire')}}";
     });
         +function ($) {

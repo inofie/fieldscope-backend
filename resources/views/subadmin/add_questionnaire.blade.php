@@ -172,7 +172,7 @@
             </div>
             <div class="modal-footer footer-close-button">
                 <div class="add-cancel-bnt">
-                    <button type="button" class="btn btn-save bg-modified" data-dismiss="modal">
+                    <button type="button" onclick="window.location='{{ url("subadmin/questionnaire") }}'" class="btn btn-save bg-modified">
                         <ul class="add-cancel-btn">
                             <li>×</li>
                             <li>Close</li>

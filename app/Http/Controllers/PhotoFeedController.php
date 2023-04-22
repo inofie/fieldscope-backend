@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\TagExport;
 use App\Http\Middleware\LoginAuth;
 use App\Models\Project;
+use App\Models\Category;
 use App\Models\ProjectMedia;
 use App\Models\ProjectMediaTag;
 use App\Models\Sticker;
@@ -150,6 +151,7 @@ class PhotoFeedController extends Controller
     /** Get photo and its child entities details */
     public function details(Request $request,$id)
     {
+        $this->__view = 'subadmin/photo_feed_details';
         $request['id'] = $id ;
         //<editor-fold desc="Validation">
         $param_rules['id'] = [
@@ -161,16 +163,18 @@ class PhotoFeedController extends Controller
         if ($this->__is_error)
             return $response;
         //</editor-fold>
-
+        $projectid = ProjectMedia::where('id',$id)->pluck('project_id')->toArray();
         $media = ProjectMedia::getById($id,['tags_data','category']);
-
+        $media['project'] = Project::getById($projectid);
+        $media['area'] =  Category::where('id',$media['category']['parent_id'])->first();
 //        dd($media->toArray());
 //        die('valdiation good: '.$id);
-
+        
         $this->__is_ajax = true;
         $this->__is_paginate = false;
         $this->__collection = false;
-        return $this->__sendResponse('User', $media  , 200, 'Photo Details retrieved successfully.');
+        
+        return view('subadmin/photo_feed_details',compact('media'));
     }
 }
 

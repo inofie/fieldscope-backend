@@ -240,7 +240,7 @@ Route::group(['middleware' => ['login.auth','admin.auth'], 'prefix'=>'subadmin',
         /*Route::get('photo_feed_datatable', 'ProjectController@projectDatatable');*/
         Route::get('photo_feed/edit/{id}', 'PhotoFeedController@editPhoto');
         Route::post('photo_feed/update/{id}', 'PhotoFeedController@updatePhoto');
-
+        Route::get('photo_feed/details/{id}', 'PhotoFeedController@details');
 
          /** Eagle View */
         Route::group(['prefix'=>'ev','as'=>'ev.'], function (){
