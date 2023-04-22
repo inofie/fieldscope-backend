@@ -253,6 +253,7 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $request['assigned_user_id'] = !empty($request['assigned_user_id']) ? $request['assigned_user_id'] : $request['user_id'];
         $param_rules['company_id'] = 'required|int';
         $param_rules['name'] = 'required|string|max:100';
@@ -1363,8 +1364,7 @@ class ProjectController extends Controller
 //        die('static');
 //        $reportUrl = (env('BASE_URL').config('constants.PDF_PATH').'static_doc.pdf');
 //        return redirect($reportUrl);
-
-        $user = User::where('token', $request['user-token'])->first();
+        $user = User::where('token', $request->header('user-token'))->first();
         if (count((array)$user) < 1) {
             $this->__is_ajax = true;
             return $this->__sendError('This user token is invalid.', [['auth' => 'This user token is invalid.']], 200);
