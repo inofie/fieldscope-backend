@@ -163,18 +163,18 @@ class PhotoFeedController extends Controller
         if ($this->__is_error)
             return $response;
         //</editor-fold>
+        //$media['latest_photos'] = ProjectMedia::getLatestPhotos($request->all());
         $projectid = ProjectMedia::where('id',$id)->pluck('project_id')->toArray();
         $media = ProjectMedia::getById($id,['tags_data','category']);
         $media['project'] = Project::getById($projectid);
         $media['area'] =  Category::where('id',$media['category']['parent_id'])->first();
-//        dd($media->toArray());
 //        die('valdiation good: '.$id);
         
         $this->__is_ajax = true;
         $this->__is_paginate = false;
         $this->__collection = false;
         
-        return view('subadmin/photo_feed_details',compact('media'));
+        return view('subadmin/photo_feed_details',compact('media','id'));
     }
 }
 

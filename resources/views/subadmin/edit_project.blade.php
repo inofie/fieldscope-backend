@@ -1004,10 +1004,8 @@
         function initAutocomplete(){
             let addressInput = $('input[name="address1"]');
             let options = {
-                types: ['street_address'],
-                componentRestrictions: {
-                    country: ["us"]
-                },
+                types: ['geocode'],
+               
                 fields: ["name","address_components", "geometry"],
             };
 
@@ -1141,6 +1139,6 @@
             //$('.accordion-heading i').toggleClass('fa-chevron-right fa-chevron-down');
         });
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_PLACES_KEY')}}&libraries=places&callback=initAutocomplete&v=3.50&region=us" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlUlyus8U80FZOXPzVHEeVEYHcJHsOrjU&libraries=places&callback=initAutocomplete&v=3.50&region=us" async defer></script>
 @endpush
 

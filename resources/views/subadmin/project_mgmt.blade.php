@@ -480,9 +480,7 @@
                 types: ["geocode"],
                 /** street_address: indicates a precise street address,
                  * address: from table 3 */
-                componentRestrictions: {
-                    country: ["us","pk"]
-                },
+               
                 fields: ["name","address_components", "geometry"],
             };
 
@@ -838,8 +836,9 @@
             function template(params) {
                 let grid = "";
                 params.forEach((element,index) => {
-
                     let substr =element.address1.length > 35 ? element.address1.substring(0, 35)+' ...' : element.address1;
+                   let subassigned_user = element.assigned_user.length > 30 ? element.assigned_user.substr(0, 30) + '...' : element.assigned_user;
+                    let subemail = element.customer_email.length > 30 ? element.customer_email.substr(0, 30) + '...' : element.customer_email;
                     // "http://127.0.0.1:8000/uploads/media/1631144783457-1631145186-106830256.jpg"
 
                     // assets/images/pm-cardimg.png
@@ -925,10 +924,10 @@
                                     <div class="card-img">
                                         <img src="${element.thumb}" alt="${element.name} Thumbnail">
                                     </div>
-                                    <div class="card-footer" style="right: 5px;">
+                                    <div class="card-footer" style="right: 2px;">
                                         <ul>
                                             <li class="address-icon"><span>Assigned To</span></li>
-                                            <li><p>${element.assigned_user}</p></li>
+                                            <li><p>${subassigned_user}</p></li>
                                         </ul>
                                         <ul>
                                             <li><span>Claim #</span></li>
@@ -936,10 +935,10 @@
                                         </ul>
                                        
                                     </div>
-                                    <div class="card-footer" style="left: 5px;">
+                                    <div class="card-footer" style="left: 2px;">
                                     <ul>
                                             <li class="address-icon"><span>Email</span></li>
-                                            <li><p>${element.customer_email}</p></li>
+                                            <li><p>${subemail}</p></li>
                                         </ul>
                                 
                                         <ul>

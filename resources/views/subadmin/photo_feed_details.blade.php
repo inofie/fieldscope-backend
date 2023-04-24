@@ -54,6 +54,14 @@
                 <label>Annotation</label>
                 {{$media['note']}}
                 </ul>
+                
+               <ul>
+                <div class="col-md-3  card-col-modified">
+                        <a href="{{url('subadmin/photo_feed/edit/'.$id)}}">
+                        <i class="fa fa-pen pl-1"></i></a>
+                </div>
+            </ul>
+                
                 </div>
     </div>
 </div>
