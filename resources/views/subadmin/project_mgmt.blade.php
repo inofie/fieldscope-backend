@@ -795,7 +795,7 @@
                 // console.log($(document).find("select,textarea, input").serialize());
                 $('#project_page_controls').pagination({
                     dataSource: '{!! URL::to("subadmin/project_datatable") !!}',
-                    pageSize: 8,
+                    pageSize: 9,
                     locator: "records",
                     autoHidePrevious: true,
                     autoHideNext: true,
