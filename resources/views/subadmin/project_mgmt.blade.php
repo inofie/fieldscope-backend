@@ -418,7 +418,7 @@
 
                     </div>
                     <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
-                        <input name="customer_email" type="text" class="input" placeholder="Customer Email">
+                        <input name="customer_email" readonly type="text" class="input" placeholder="Customer Email">
                     </div>
 
                     <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
@@ -910,12 +910,14 @@
                                         <ul>
                                             <li>
                                                 <ul class="address-icon">
-                                                    <li><p data-toggle="tooltip"
+                                                <li><p data-toggle="tooltip"
                                                     title="${element.address1}">${substr}</p></li>
-                                                    <li class="address-icon"><img
+                                                </ul>
+                                                <ul class="address-icon">
+                                                <li class="address-icon"><img
                                                                 src="{{asset('assets/images/calender-icon.png')}}"
                                                                 alt="...">
-                                                        <p>${moment(element.created_at).fromNow()}, <span>${moment(element.created_at).format('hh:mm A')}</span></p></li>
+                                                <p>${moment(element.created_at).fromNow()}, <span>${moment(element.created_at).format('hh:mm A')}</span></p></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -923,22 +925,26 @@
                                     <div class="card-img">
                                         <img src="${element.thumb}" alt="${element.name} Thumbnail">
                                     </div>
-                                    <div class="card-footer">
+                                    <div class="card-footer" style="right: 5px;">
                                         <ul>
-                                            <li><span>Assigned To</span></li>
+                                            <li class="address-icon"><span>Assigned To</span></li>
                                             <li><p>${element.assigned_user}</p></li>
-                                        </ul>
-                                        <ul>
-                                            <li><span>Inspection Date</span></li>
-                                            <li><p>${moment(element.inspection_date).format("MM/DD/YYYY")}</p></li>
                                         </ul>
                                         <ul>
                                             <li><span>Claim #</span></li>
                                             <li><p>${element.claim_num}</p></li>
                                         </ul>
-                                        <ul>
-                                            <li><span>Email</span></li>
+                                       
+                                    </div>
+                                    <div class="card-footer" style="left: 5px;">
+                                    <ul>
+                                            <li class="address-icon"><span>Email</span></li>
                                             <li><p>${element.customer_email}</p></li>
+                                        </ul>
+                                
+                                        <ul>
+                                            <li><span>Inspection Date</span></li>
+                                            <li><p>${moment(element.inspection_date).format("MM/DD/YYYY")}</p></li>
                                         </ul>
                                     </div>
                                 </div>
