@@ -48,7 +48,7 @@
         <div class="col-12 col-sm-6 col-md-3">
             <div class="companyinfobody rm-companyinfobody-modified edit-profile-input">
                     <label>Customer Email</label>
-                <input type="text" class="input" name="customer_email" value="{{$data['project']['customer_email']}}" placeholder="Customer Email">
+                <input type="text" class="input" readonly name="customer_email" value="{{$data['project']['customer_email']}}" placeholder="Customer Email">
             </div>
         </div>
         <div class="col-12 col-sm-6 col-md-6">
