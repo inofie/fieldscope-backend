@@ -924,24 +924,24 @@
                                     <div class="card-img">
                                         <img src="${element.thumb}" alt="${element.name} Thumbnail">
                                     </div>
-                                    <div class="card-footer" style="right: 2px;">
+                                    <div class="card-footer" style="right: 2px;padding: 0 0 6px 0;">
                                         <ul>
                                             <li class="address-icon"><span>Assigned To</span></li>
                                             <li><p>${subassigned_user}</p></li>
                                         </ul>
-                                        <ul>
+                                        <ul style="text-align: right;">
                                             <li><span>Claim #</span></li>
                                             <li><p>${element.claim_num}</p></li>
                                         </ul>
                                        
                                     </div>
-                                    <div class="card-footer" style="left: 2px;">
+                                    <div class="card-footer" style="left: 2px;padding: 0;">
                                     <ul>
                                             <li class="address-icon"><span>Email</span></li>
                                             <li><p>${subemail}</p></li>
                                         </ul>
                                 
-                                        <ul>
+                                        <ul style="text-align: right;">
                                             <li><span>Inspection Date</span></li>
                                             <li><p>${moment(element.inspection_date).format("MM/DD/YYYY")}</p></li>
                                         </ul>
