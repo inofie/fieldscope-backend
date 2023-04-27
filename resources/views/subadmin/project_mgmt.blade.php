@@ -86,13 +86,13 @@
                          
                         </div>
                         
-                    </div>
+
                     
                     <div class="row new-card-row" id="project_grid">
 
 
                     </div>
-
+            </div>
                 </div>
         <!-- New Work  End -->
 
@@ -847,7 +847,7 @@
                 params.forEach((element,index) => {
                     let substr =element.address1.length > 35 ? element.address1.substring(0, 35)+' ...' : element.address1;
                    let subassigned_user = element.assigned_user.length > 30 ? element.assigned_user.substr(0, 30) + '...' : element.assigned_user;
-                    let subemail = element.customer_email.length > 30 ? element.customer_email.substr(0, 30) + '...' : element.customer_email;
+                   // let subemail = element.customer_email.length > 30 ? element.customer_email.substr(0, 30) + '...' : element.customer_email;
                     // "http://127.0.0.1:8000/uploads/media/1631144783457-1631145186-106830256.jpg"
 
                     // assets/images/pm-cardimg.png
@@ -947,7 +947,7 @@
                                     <div class="card-footer" style="left: 2px;padding: 0;">
                                     <ul>
                                             <li class="address-icon"><span>Email</span></li>
-                                            <li><p>${subemail}</p></li>
+                                            <li><p>${element.customer_email}</p></li>
                                         </ul>
                                 
                                         <ul style="text-align: right;">
