@@ -195,8 +195,8 @@
                     <div class="col-md-3  card-col-modified">
                         <a href="{{url('subadmin/photo_feed/edit/'.$item->id)}}"><i
                                                             class="fa fa-pen pl-1"></i></a>
-                        <a href="{{url('subadmin/photo_feed/details/'.$item->id)}}"><i
-                                                            class="fa fa-eye pl-1"></i></a>
+                        <!-- <a href="{{url('subadmin/photo_feed/details/'.$item->id)}}"><i
+                                                            class="fa fa-eye pl-1"></i></a> -->
                             <div class="card-image card-image-modified">
                                 <img src="{{url('uploads/media/'.$item->path."?".$item->updated_at )}}" class="img-responsive"/>
                             </div>
