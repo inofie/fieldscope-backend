@@ -73,7 +73,7 @@
         <!-- New Work  End -->
     <div class="row">
         <div class="col-md-6">
-            <h1 class="main-heading">Photo Feed </h1>
+            <!-- <h1 class="main-heading">Photo Feed </h1> -->
         </div>
 
         <div class="col-md-6">
@@ -192,22 +192,35 @@
 
         @if(!empty($data['latest_photos']->total()))
             @foreach($data['latest_photos'] AS $key => $item)
-                    <div class="col-md-3  card-col-modified">
-                        <a href="{{url('subadmin/photo_feed/edit/'.$item->id)}}"><i
+                             <div class="col-md-4">
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <ul class="new-card address-icon">
+                                            <li>
+                                                <!-- <a href="${baseUrl+"/subadmin/project/detail/"+element.id}"></a> -->
+                                                <h4>{{$item->p_name}}</h4>
+                                            </li>
+                                            <li>
+                                            <a href="{{url('subadmin/photo_feed/edit/'.$item->id)}}"><i
                                                             class="fa fa-pen pl-1"></i></a>
-                        <!-- <a href="{{url('subadmin/photo_feed/details/'.$item->id)}}"><i
+                                                <!-- <a href="{{url('subadmin/photo_feed/details/'.$item->id)}}"><i
                                                             class="fa fa-eye pl-1"></i></a> -->
-                            <div class="card-image card-image-modified">
-                                <img src="{{url('uploads/media/'.$item->path."?".$item->updated_at )}}" class="img-responsive"/>
-                            </div>
-                            <div class="card-details card-details-modified" style="min-height:80px">
-                                <h4>{{$item->p_name}}</h4>
-                                <h5 class="light-gray"
+                                            </li>
+                                        </ul>
+                                       
+                                    </div>
+                                    <div class="card-img">
+                                    <img src="{{url('uploads/media/'.$item->path)}}"  class="img-responsive"/>
+                                    </div>
+                                  
+                                    <div class="card-footer" style="left: 2px;padding: 0;">
+                                    <h5 class="light-gray"
                                     title="{{\Carbon\Carbon::parse($item->created_at)->format('Y-m-d g:i A') }}">{{\Carbon\Carbon::parse($item->created_at)->diffForHumans() }}
                                     . {{$item->u_first_name}} {{$item->u_last_name}}</h5>
+                                    </div>
+
+                                </div>
                             </div>
-                        </a>
-                    </div>
                 
             @endforeach
         @else
@@ -216,14 +229,12 @@
         </div>
         @endif
 
-
-</div>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         {{$data['latest_photos']->appends(request()->input())->links()}}
     </div>
 </div>
-
+</div>
 
 <div class="modal fade" id="editModal" role="dialog">
     <div class="modal-dialog modal-sm">

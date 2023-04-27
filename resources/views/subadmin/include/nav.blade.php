@@ -13,11 +13,11 @@
 					</div>
 				<!-- </a> -->
 			</div>
-			<div class="search-input">
+			<!-- <div class="search-input">
 			<input value="" id="search-input" name="keyword" type="text" class="form-control" placeholder="Search Projects">
 			
 				<img src="{{asset('image/search-icon.png')}}" class="img-responsive"/>
-			</div>
+			</div> -->
 			<ul class="nav navbar-nav navbar-modified ms-auto navigation " >
 				<li>
 					<a class="@if(request()->is('subadmin/project')) active-nav @endif" href="{{ URL::to('subadmin/project') }}" >Projects</a>

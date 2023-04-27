@@ -36,7 +36,7 @@
                 {{\Carbon\Carbon::parse($media['project']['inspection_date'])->format('m/d/y') }}
          
                 <div class="card-img">
-                <img src="{{URL::to('uploads/media/'.$media['path'] )}}" id="my-image" style="/*display: none;*/ height:800px; width:800px;" >
+                <img src="{{URL::to('uploads/media/'.$media['path'] )}}" class="img-responsive">
                 </div>
                 
                 

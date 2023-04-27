@@ -33,6 +33,7 @@
                         <div class="col-md-12">
                             <div class="card-title">
                                 <h1 class="main-heading">Projects</h1>
+                                <div class="buttons">
                                 <button type="button" class="add-btn" data-toggle="modal" data-target="#myModal">
                                     <ul class="d-flex align-items-center">
                                         <li>
@@ -44,7 +45,9 @@
                                     </ul>
 
                                 </button>
+                               
                             </div>
+                            
                         </div>
                     </div>
 
@@ -65,8 +68,8 @@
                             </button>
                                 <a href="http://127.0.0.1:8000/subadmin/crm/sync" class="btn-green-new">JobScope Sync </a>
                             </div>
-                            <div class="data-tables-select" >
-                                <label>
+                            <div class="data-tables-select">
+                                <!-- <label style="left: 2px;padding: 0 0 6px 0;">
                                     Show
                                         <select name="example_length" aria-controls="example" class="form-control input-sm">
                                             <option value="10">10</option><option value="20">20</option>
@@ -74,11 +77,17 @@
                                             <option value="200">200</option>
                                         </select>
                                     entries
-                                </label>
+                                </label> -->
                             </div>
+                            <div class="search-input">
+                                <input value="" id="search-input" name="keyword" type="text" class="form-control" placeholder="Search Projects">
+                                
+                            </div>
+                         
                         </div>
+                        
                     </div>
-
+                    
                     <div class="row new-card-row" id="project_grid">
 
 
