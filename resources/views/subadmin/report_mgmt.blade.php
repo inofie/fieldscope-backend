@@ -904,7 +904,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delIcon delete_section_item"><i class="far fa-trash-alt"></i>
+                                                            <li><a href="# " style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -919,7 +919,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delIcon delete_section_item"><i class="far fa-trash-alt"></i>
+                                                            <li><a href="# " style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -935,7 +935,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delIcon delete_section_item"><i class="far fa-trash-alt"></i>
+                                                            <li><a href="# " style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -950,7 +950,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="" class="delIcon delete_section_item"><i class="far fa-trash-alt"></i>
+                                                            <li><a href="#" style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -1818,7 +1818,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li><a class="delIcon delete_section_item" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a></li>
+                                                            <li><a class="delIcon delete_section_item" href="javascript:void(0)"><img src="{{asset('image/trash.png')}}" alt="..."></a></li>
                                                         </ul>
                                                     </div>
                                    
@@ -1840,7 +1840,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li> <a class="delIcon delete_section_item" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a></li>
+                                                            <li> <a class="delIcon delete_section_item" href="javascript:void(0)"><img src="{{asset('image/trash.png')}}" alt="..."></a></li>
                                                         </ul>
                                                     </div>
                                    

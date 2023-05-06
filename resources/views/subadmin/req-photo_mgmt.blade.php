@@ -523,13 +523,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group  new-input-modal">
-                           
+                        <label>Photo View</label>
                             <input name="name" type="text" class="form-control"
                                    placeholder="Inspection Area Name">
                         </div>
 
                         <div class="form-group  ">
-                        
+                        <label>User Type</label>
                             <select name="company_group_id[]" class="select2 form-control " multiple>
 
                                 @foreach($data['companyGroups'] AS $key => $item)
@@ -539,7 +539,7 @@
                         </div>
 
                         <div class="form-group new-input-modal">
-                            
+                        <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
                             <select name="thumbnail" class="select2 form-control " data-placeholder="Default Thumbnail">
                                 <option value=""></option>
                                 <option value="1">Yes</option>
@@ -548,7 +548,7 @@
                         </div>
 
                         <div class="form-group  new-input-modal">
-                           
+                        <label>Min Quantity</label>
                             <input name="min_quantity" type="text" class="form-control" placeholder="Quantity">
                         </div>
                     </div>

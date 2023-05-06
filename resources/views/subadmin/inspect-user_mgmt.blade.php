@@ -223,32 +223,32 @@
                             <div class="row">
 
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                    <!-- <label>Name</label> -->
+                                    <label>Name</label>
                                     <input type="text" name="name"
                                            placeholder="Enter Name">
                                 </div>
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                    <!-- <label>Email</label> -->
+                                    <label>Email</label>
                                     <input type="text" name="email"
                                            placeholder="Enter Email">
                                 </div>
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                    <!-- <label>Password</label> -->
+                                    <label>Password</label>
                                     <input type="password" name="password"
                                            placeholder="Enter Password">
                                 </div>
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                    <!-- <label>Confirm Password</label> -->
+                                    <label>Confirm Password</label>
                                     <input type="password" name="password_confirmation"
                                            placeholder="Confirm Password">
                                 </div>
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                    <!-- <label>Mobile Number</label> -->
+                                    <label>Mobile Number</label>
                                     <input type="text" name="mobile_no"
                                            placeholder="Enter  Mobile Number">
                                 </div>
                                 <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified">
-                                    <!-- <label>User Type</label> -->
+                                    <label>User Type</label>
                                     <select name="company_group_id" id="sel1">
                                         @foreach($data['companyGroup'] AS $item)
                                             <option value="{{$item->id}}">{{$item->title}}</option>
@@ -304,22 +304,22 @@
                     <input type="hidden" name="page" value="{{\Request::input('page',1)}}">
                     <div class="modal-body">
                         <div class="form-group new-input-modal">
-                            <label></label>
+                            <label>Name</label>
                             <input type="text" name="name" 
                                    placeholder="Enter Name">
                         </div>
                         <div class="form-group new-input-modal">
-                        <label></label>
+                        <label>Email</label>
                             <input type="text" name="email" 
                                    placeholder="Enter Email">
                         </div>
                         <div class="form-group new-input-modal">
-                        <label></label>
+                        <label>Mobile Number</label>
                             <input type="text" name="mobile_no"
                                    placeholder="Enter  Mobile Number">
                         </div>
                         <div class="form-group new-input-modal">
-                        <label></label>
+                        <label>User Types</label>
                             <select name="company_group_id"  id="sel1">
                                 @foreach($data['companyGroup'] AS $item)
                                     <option value="{{$item->id}}">{{$item->title}}</option>

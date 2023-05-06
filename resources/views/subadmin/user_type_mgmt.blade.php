@@ -350,7 +350,7 @@
                     <div class="modal-body companyinfobody rm-companyinfobody-modified">
                         <div class="row">
                             <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>User Type</label> -->
+                                <label>User Type Name</label>
                                 <input type="text" name="user_type"  placeholder="User Type Name" required/>
                             </div>
                         </div>
@@ -392,7 +392,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="form-group new-input-modal">
-                            <label></label>
+                            <label>User Type Name</label>
                         <input type="text" name="user_type" placeholder="User Type Name" required/>
                             </div>
                         </div>
