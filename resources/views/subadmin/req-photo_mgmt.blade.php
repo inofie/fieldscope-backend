@@ -477,7 +477,7 @@
 
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified">
                             <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
-                                <select name="thumbnail"  class="select2" data-placeholder="Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif"  @if($data['thumbnailCount'] > 0) disabled @endif>
+                                <select name="thumbnail"  class="select" data-placeholder="Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif"  @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>
                                     <option value="1">Yes</option>
                                     <option value="0">No</option>
@@ -540,7 +540,7 @@
 
                         <div class="form-group new-input-modal">
                         <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
-                            <select name="thumbnail" class="select2 form-control " data-placeholder="Default Thumbnail">
+                            <select name="thumbnail" class="select form-control " data-placeholder="Default Thumbnail">
                                 <option value=""></option>
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>

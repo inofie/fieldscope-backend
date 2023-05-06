@@ -1405,6 +1405,7 @@ ul {
     width: 100%;
     border-radius: 5px !important;
     padding-left: 10px;
+    border: 1px solid #ccc !important;
 }
 
 .new-input-modal select {
@@ -1418,6 +1419,7 @@ ul {
     border-radius: 5px !important;
     padding-left: 10px;
     margin: 0;
+    border: 1px solid #ccc !important;
 }
 
 .mr-0 .form-group {

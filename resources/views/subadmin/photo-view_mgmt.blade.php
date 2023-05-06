@@ -277,7 +277,7 @@
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified ">
                             <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
-                                <select name="thumbnail" class="select2" data-placeholder="Thumbnail"
+                                <select name="thumbnail" class="select" data-placeholder="Thumbnail"
                                         @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Default
                                         Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>
@@ -317,7 +317,7 @@
                     <div class="modal-header logoimageheader">
                         <div class="header-content">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h3 class="modal-title text-left">Add Photo View</h3>
+                            <h3 class="modal-title text-left">Edit Photo View</h3>
                         </div>
                     </div>
                     <div class="modal-body companyinfobody rm-companyinfobody-modified">
@@ -342,7 +342,7 @@
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified ">
                             <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
-                                <select name="thumbnail" class="select2" data-placeholder="Default Thumbnail"
+                                <select name="thumbnail" class="select" data-placeholder="Default Thumbnail"
                                         @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Default
                                         Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>
