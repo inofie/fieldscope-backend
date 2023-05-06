@@ -941,7 +941,7 @@ a:visited {
 
 .nav.side-menu>li.active,
 .nav.side-menu>li.current-page {
-    border-right: 5px solid ##00aee7
+    border-right: 5px solid #00aee7
 }
 
 .nav li.current-page {
@@ -4254,7 +4254,7 @@ div[data-role=editor-toolbar] {
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #73879C;
-    padding-top: 5px
+    padding-top: 7px
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__rendered {

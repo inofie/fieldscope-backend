@@ -353,7 +353,7 @@
 
 
 @push('page_level_css')
-{{--    <style>--}}
+<!-- {{--    <style>--}}
 {{--        /**--}}
 {{--     * The CSS shown here will not be introduced in the Quickstart guide, but shows--}}
 {{--     * how you can use CSS to style your Element's container.--}}
@@ -385,7 +385,7 @@
 {{--        .StripeElement--webkit-autofill {--}}
 {{--            background-color: #fefde5 !important;--}}
 {{--        }--}}
-{{--    </style>--}}
+{{--    </style>--}} -->
 @endpush
 @push('page_level_scripts')
     <script type="text/javascript">
@@ -404,7 +404,7 @@
             var table = $('#example').DataTable({
                 "processing": true,
                 "serverSide": true,
-                // "ordering": true,
+                "ordering": true,
                 "autoWidth": false,
                 searching: false,
                 dom: '<pl><t>ir',
@@ -451,7 +451,7 @@
                     $(row).addClass('table-body');
                 },
                 columnDefs: [
-                    { orderable: false, targets: -1, },
+                    
                     { orderable: true, targets: '_all', },
                 ],
                 rowReorder: {

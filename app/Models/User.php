@@ -575,18 +575,21 @@ class User extends Model
 
         $sortMap = [
             'full_name',
+            'full_name',
             'user.email',
-            'user.mobile_no'
+            'user.mobile_no',
+            'cg.title'
         ];
 
         $data['total_record'] = $query->count();
 
-        \Log::debug('count: '.print_r(['count' => $query->count()],1));
+        // \Log::debug('count: '.print_r(['count' => $query->count()],1));
 
         $param['column_index'] = empty($sortMap[$param['column_index']]) ? 0 : $param['column_index'];
-        $query = $query->take($param['length'])->skip($param['start'])->orderByRaw("{$sortMap[$param['column_index']]} {$param['sort']}");
+        $query = $query->take($param['length'])->skip($param['start'])
+        ->orderByRaw("{$sortMap[$param['column_index']]} {$param['sort']}");
 
-//        \Log::debug('sort: '.print_r(['col' => $sortMap[$param['column_index']], 'direction' => $param['sort'] ],1));
+       \Log::debug('sort: '.print_r(['col' => $sortMap[$param['column_index']], 'direction' => $param['sort'] ],1));
 
         $query = $query->get();
         $data['records'] = $query;

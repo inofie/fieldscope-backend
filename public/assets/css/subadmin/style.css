@@ -796,7 +796,7 @@ border: none;
     display: block;
     padding: 6px 12px;
     line-height: 1.42857143;
-    border: 1px solid transparent;
+    border: 1px solid #ccc !important;
     margin-bottom: 10px;
     margin-top: 10px;
 }
