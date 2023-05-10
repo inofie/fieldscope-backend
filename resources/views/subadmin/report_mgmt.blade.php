@@ -1827,7 +1827,7 @@
         })  
         
         $(document).on( 'click', '.delete_section_item', function(){
-            $(this).parent().parent().remove();
+            $(this).parent().parent().parent().parent().parent().remove();
         })  
         
         $('#add_more_item_option').click( function(){
