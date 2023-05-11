@@ -1379,14 +1379,16 @@ class ReportController extends Controller
         if($cReport){
         $cReport['content'] = $request['editor1'];
         $cReport->save();
+        $this->__setFlash('success', 'Updated Successfully');
         }
     else{
         $reportTemplate = new ReportTemplate();
         $cReport = $reportTemplate->firstOrNew($where);
         $cReport->fill($request->all());
         $cReport->save();
-    }
         $this->__setFlash('success', 'Added Successfully');
+    }
+        
         $this->__is_paginate = false;
         $this->__is_collection = false;
         return $this->__sendResponse('Tag', [], 200,'Introduction added successfully.');
