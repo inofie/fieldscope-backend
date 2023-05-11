@@ -1018,7 +1018,7 @@
                             <tr class="table-body">
                                 <td  class="left first-cell">{{$item->title}}</td>
                                 <td class="right">
-                                    <div class="dropdown">
+                                    <!-- <div class="dropdown">
                                     <button class="dropdown-dots dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <img src="{{asset('assets/images/dropdown-dots.png')}}" alt="...">
                                     </button>
@@ -1026,7 +1026,7 @@
                                         <li><a href="#"  data-id="{{$item->id}}" class="edit_intro"><img src="{{asset('image/edit.png')}}" alt="..."></a></li>
                                         <li><a href="#" data-id="{{$item->id}}" class="delete_intro"><img src="{{asset('image/trash.png')}}" alt="..."></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 </td>
                             </tr>
                         @endforeach
