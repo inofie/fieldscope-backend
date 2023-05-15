@@ -94,24 +94,25 @@ class Project extends Model
 
         if (!empty($param['type']) && $param['type'] == 1) {
             $query->where('user_id', $param['user_id']);
-        } else {
-            $query->where('assigned_user_id', $param['user_id']);
-            $query->where('user_id', '<>', $param['user_id']);
         }
+        // else {
+        //     $query->where('assigned_user_id', $param['user_id']);
+        //     $query->where('user_id', '<>', $param['user_id']);
+        // }
 
-        if (!empty($param['keyword'])) {
-            $keyword = $param['keyword'];
-            $query->where(function ($where) use ($keyword) {
-                $where->orWhere('project.name', 'LIKE', "%$keyword%");
-                $where->orWhere('project.address1', 'LIKE', "%$keyword%");
-            });
-        }
+        // if (!empty($param['keyword'])) {
+        //     $keyword = $param['keyword'];
+        //     $query->where(function ($where) use ($keyword) {
+        //         $where->orWhere('project.name', 'LIKE', "%$keyword%");
+        //         $where->orWhere('project.address1', 'LIKE', "%$keyword%");
+        //     });
+        // }
 
-        if(!empty($param['project_status'])){
-            $query->where('project_status',$param['project_status']);
-        } else {
-            $query->where('project_status', 1);
-        }
+        // if(!empty($param['project_status'])){
+        //     $query->where('project_status',$param['project_status']);
+        // } else {
+        //     $query->where('project_status', 1);
+        // }
 
         if (!empty($param['paginate'])) {
             return $query->paginate(Config::get('constants.PAGINATION_PAGE_SIZE'));
@@ -137,7 +138,7 @@ class Project extends Model
             //echo "AAA";die;
             $keyword = $param['keyword'];
             $keywordWhere = "
-            AND (name LIKE '%$keyword%' OR 
+            AND (name LIKE '%$keyword%' OR
             address1 LIKE '%$keyword%' )";
             $query->where(function ($where) use ($keyword) {
                 $where->orWhere('name', 'LIKE', "'%$keyword%'");
@@ -146,7 +147,7 @@ class Project extends Model
         }
         $sql = "
         SELECT *, (SELECT path FROM project_media AS pm1 WHERE `pm1`.project_id = `project`.id ORDER BY id ASC LIMIT 1) AS media
-        FROM project WHERE 
+        FROM project WHERE
         company_id = $companyId
         $typeWhere
         ";
@@ -169,23 +170,23 @@ class Project extends Model
         project.id ,
             project.name ,
             project.address1,
-            project.created_at , 
-            project.project_status , 
-            project.last_crm_sync_at,            
-            project.inspection_date,            
-            project.claim_num,            
-            project.customer_email,            
-            CONCAT(u.first_name,' ',u.last_name) AS assigned_user,            
+            project.created_at ,
+            project.project_status ,
+            project.last_crm_sync_at,
+            project.inspection_date,
+            project.claim_num,
+            project.customer_email,
+            CONCAT(u.first_name,' ',u.last_name) AS assigned_user,
             IF(CONCAT('$mediaPath',u.image_url) IS NULL or CONCAT('$mediaPath',u.image_url) = '', '$placeHolder', CONCAT('$mediaPath',u.image_url)) AS image_url,
             CONCAT('$mapImagePath',project.id,'.jpg') project_map_image
-            
+
         ");
 
 
         if (!empty($output['keyword'])) {
             $keyword = $output['keyword'];
             $query->whereRaw("
-                (project.name LIKE '%$keyword%'            
+                (project.name LIKE '%$keyword%'
                 OR u.first_name LIKE '%$keyword%'
                 OR u.last_name LIKE '%$keyword%')
             ");
@@ -273,16 +274,16 @@ class Project extends Model
         project.id ,
             project.name ,
             project.address1,
-            project.created_at , 
-            project.last_crm_sync_at , 
-            CONCAT(u.first_name,' ',u.last_name) AS assigned_user,            
+            project.created_at ,
+            project.last_crm_sync_at ,
+            CONCAT(u.first_name,' ',u.last_name) AS assigned_user,
             IF(CONCAT('$mediaPath',u.image_url) IS NULL or CONCAT('$mediaPath',u.image_url) = '', '$placeHolder', CONCAT('$mediaPath',u.image_url)) AS image_url
-            
+
         ");
         if (!empty($output['keyword'])) {
             $keyword = $output['keyword'];
             $query->whereRaw("
-                (project.name LIKE '%$keyword%'            
+                (project.name LIKE '%$keyword%'
                 OR u.first_name LIKE '%$keyword%'
                 OR u.last_name LIKE '%$keyword%')
             ");
@@ -426,8 +427,8 @@ class Project extends Model
                     $q->selectRaw('
                         project_media_tag.tag_id ,
                         project_media_tag.qty AS selected_qty,
-                        project_media_tag.target_id,                        
-                        project_media_tag.target_type                            
+                        project_media_tag.target_id,
+                        project_media_tag.target_type
                     ');
 
 //                $q->whereNull('t.deleted_at');
@@ -455,17 +456,17 @@ class Project extends Model
 
     public static function getProjectSurveyAndResponse_byProjectId($projectId,$categoryId = NULL ){
         $projectSurvey =  self::with(['project_survey' => function($q) use($categoryId) {
-            $q->join('query AS q','q.id' , '=', 'project_query.query_id')->selectRaw('                 
+            $q->join('query AS q','q.id' , '=', 'project_query.query_id')->selectRaw('
                     project_query.id AS project_query_id,
                     project_query.project_id,
-                    project_query.query,                        
-                    project_query.response,                    
-                    project_query.created_at,                     
-                    q.id,  
-                    q.company_id,       
-                    q.type,    
-                    q.image_url,    
-                    q.category_id,  
+                    project_query.query,
+                    project_query.response,
+                    project_query.created_at,
+                    q.id,
+                    q.company_id,
+                    q.type,
+                    q.image_url,
+                    q.category_id,
                     q.options,
                     q.photo_view_id
                  ');
@@ -544,7 +545,7 @@ class Project extends Model
         return $this->hasOne('App\Models\ProjectMedia','project_id','id')
             ->join('category AS c','c.id','=','project_media.category_id')
             ->whereRaw('thumbnail = 1')
-            ->selectRaw("project_media.id, project_id, category_id, path, note, 
+            ->selectRaw("project_media.id, project_id, category_id, path, note,
             IF(CONCAT('$mediaPath',path) IS NULL or CONCAT('$mediaPath',path) = '', '$placeHolder', CONCAT('$mediaPath',path)) image_url")->oldest('project_media.created_at');
 
     }
