@@ -113,7 +113,6 @@ class UserController extends Controller
 //        Helper::pd($params,'$params');
         $params['column_index'] = $params['order'][0]['column'];
         $params['sort'] = $params['order'][0]['dir'];
-
         $params['parent_id'] = 0;
         $params['paginate'] = TRUE;
         $params['company_id'] = $request['company_id'];

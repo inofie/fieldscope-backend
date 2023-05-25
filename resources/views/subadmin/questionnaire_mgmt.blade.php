@@ -469,7 +469,7 @@
                 if (confirmRes) {
                     var id = $(this).closest('tr').attr('id');
                     $.ajax({
-                        url:'{!! url('subadmin/delete/questionnaire') !!}/'+id,
+                        url:'{!! url('subadmin/questionnaire/delete') !!}/'+id,
                         method:'POST',
                         dataType: 'JSON',
                         success: function(response){

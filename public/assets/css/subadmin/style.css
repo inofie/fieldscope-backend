@@ -796,7 +796,7 @@ border: none;
     display: block;
     padding: 6px 12px;
     line-height: 1.42857143;
-    border: 1px solid transparent;
+    border: 1px solid #ccc !important;
     margin-bottom: 10px;
     margin-top: 10px;
 }
@@ -847,7 +847,18 @@ border: none;
     height: 0;
     width: 0;
   }
-  
+  .modal-body input, .modal-body select, .modal-body label{
+    margin: 3px 0 3px !important;
+}
+.modal-body select{
+    border: 1px solid #ccc !important;
+}
+.modal-body .select2{
+    margin: 3px 0 3px !important;
+
+}
+
+
   /* Create a custom checkbox */
  .coverPageModalCheckBox .checkmark {
     position: absolute;

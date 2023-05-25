@@ -1410,8 +1410,8 @@ class ReportController extends Controller
 //        dd($request->all());
 
         //<editor-fold desc="Validation">
-        $param_rules['title'] = "required|min:3|max:100";
-        $param_rules['editor1'] = "required|min:3";
+        // $param_rules['title'] = "required|min:3|max:100";
+        // $param_rules['editor1'] = "required|min:3";
         $param_rules['id'] = "nullable|int";
         $messages['editor1.required'] = "The Introduction field is required";
         $response = $this->__validateRequestParams($request->all(), $param_rules);
@@ -1425,13 +1425,20 @@ class ReportController extends Controller
         $request['content'] = $request['editor1'];
 
         $where = ['id' => $request->template_id,'company_id' => $request->company_id , 'identifier' => 'introduction'];
-
+        $cReport = ReportTemplate::where('company_id',$request->company_id)->whereNull('deleted_at')->where('identifier','introduction')->first();
+        if($cReport){
+        $cReport['content'] = $request['editor1'];
+        $cReport->save();
+        $this->__setFlash('success', 'Updated Successfully');
+        }
+    else{
         $reportTemplate = new ReportTemplate();
         $cReport = $reportTemplate->firstOrNew($where);
         $cReport->fill($request->all());
         $cReport->save();
-
         $this->__setFlash('success', 'Added Successfully');
+    }
+        
         $this->__is_paginate = false;
         $this->__is_collection = false;
         return $this->__sendResponse('Tag', [], 200,'Introduction added successfully.');

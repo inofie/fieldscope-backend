@@ -24,6 +24,14 @@
             height:150px;
             border-radius:5px;
         }
+        #project_page_controls {
+    padding-left: 41px;
+    padding-bottom: 50px !important;
+}
+#project_page_controls {
+    padding-left: 14px !important;
+    padding-bottom: 60px !important;
+}
 
     </style>
 
@@ -203,8 +211,8 @@
                                             <li>
                                             <a href="{{url('subadmin/photo_feed/edit/'.$item->id)}}"><i
                                                             class="fa fa-pen pl-1"></i></a>
-                                                <!-- <a href="{{url('subadmin/photo_feed/details/'.$item->id)}}"><i
-                                                            class="fa fa-eye pl-1"></i></a> -->
+                                                <a href="{{url('subadmin/photo_feed/details/'.$item->id)}}"><i
+                                                            class="fa fa-eye pl-1"></i></a>
                                             </li>
                                         </ul>
                                        
@@ -230,7 +238,7 @@
         @endif
 
 <div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12" id="project_page_controls">
         {{$data['latest_photos']->appends(request()->input())->links()}}
     </div>
 </div>

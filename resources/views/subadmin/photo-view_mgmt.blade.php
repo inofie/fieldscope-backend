@@ -258,13 +258,12 @@
                     <div class="modal-body companyinfobody rm-companyinfobody-modified">
                         <div class="row">
                             <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Photo View Name</label> -->
+                                <label>Photo View</label>
                                 <input name="name" type="text" placeholder="Photo View" />
                             </div>
 
-                            <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified"
-                                 style="margin-top:-10px;">
-                                <!-- <label>Inspections Areas</label> -->
+                            <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified">
+                                <label>Inspections Area</label>
                                 <select name="parent_id" id="sel1" class="select2">
                                     <option selected disabled> Inspection Area</option>
                                     @foreach($data['area'] AS $item)
@@ -273,12 +272,12 @@
                                 </select>
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Quantity</label> -->
+                                <label>Quantity</label>
                                 <input name="min_quantity" type="text" placeholder="| Qty" class="quantity-input">
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified ">
-                            <!-- <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label> -->
-                                <select name="thumbnail" class="select2" data-placeholder="Thumbnail"
+                            <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
+                                <select name="thumbnail" class="select" data-placeholder="Thumbnail"
                                         @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Default
                                         Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>
@@ -318,19 +317,18 @@
                     <div class="modal-header logoimageheader">
                         <div class="header-content">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h3 class="modal-title text-left">Add Photo View</h3>
+                            <h3 class="modal-title text-left">Edit Photo View</h3>
                         </div>
                     </div>
                     <div class="modal-body companyinfobody rm-companyinfobody-modified">
                         <div class="row">
                             <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Photo View Name</label> -->
+                                <label>Photo View</label>
                                 <input name="name" type="text" placeholder="Photo View">
                             </div>
 
-                            <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified"
-                                 style="margin-top:-10px;">
-                                <!-- <label>Inspections Areas</label> -->
+                            <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified">
+                                <label>Inspections Area</label>
                                 <select name="parent_id" id="sel1" class="select2">
                                     <option selected disabled> Inspection Areas</option>
                                     @foreach($data['area'] AS $item)
@@ -339,12 +337,12 @@
                                 </select>
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Quantity</label> -->
+                                <label>Quantity</label>
                                 <input name="min_quantity" type="text" placeholder="| Qty" class="quantity-input">
                             </div>
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified ">
-                            <!-- <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label> -->
-                                <select name="thumbnail" class="select2" data-placeholder="Default Thumbnail"
+                            <label>Default Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
+                                <select name="thumbnail" class="select" data-placeholder="Default Thumbnail"
                                         @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Default
                                         Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>

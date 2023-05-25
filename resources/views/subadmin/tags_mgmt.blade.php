@@ -678,12 +678,16 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        
+                        <label>Tag Name</label>
                             <input name="name" type="text" placeholder="Tag Name">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Default Annotation</label>
                             <input name="annotation" type="text" placeholder="Default Annotation Note">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Photo View</label>
                             <select  name="ref_id" class="form-control select-form">
                                 <option disabled selected>Photo View</option>
                                 @foreach($data['photoViews'] AS $key => $item)
@@ -693,6 +697,7 @@
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Spec Type</label>
                             <select name="spec_type" class="form-control select-form spec_type" id="">
                                 <option disabled selected>Spec Type</option>
                                 @forelse($data['specTypes'] AS $key => $item)
@@ -703,12 +708,13 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified build_spec_group" style="display: none; ">
-                            <!-- <label>Build Spec</label> -->
+                            <label>Build Spec</label>
                             <select name="build_spec" class=" form-control select-form build_spec" id="">
                                 <option disabled selected>Build Spec</option>
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified hover_field_type_group">
+                        <label>Hover Field Type</label>
                             <select name="hover_field_type_id" class="form-control select-form hover_field_type" id="">
                                 <option disabled selected>Hover Field Type</option>
 
@@ -721,13 +727,14 @@
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified hover_field_group"
                              style="display: none; ">
-                            <!-- <label>Hover Field</label> -->
+                            <label>Hover Field</label>
                             <select name="hover_field_id" class="form-control select-form hover_field" id="">
                                 <option disabled selected>Select Hover Field</option>
                             </select>
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Quantity</label>
                             <select name="has_qty" class="form-control select-form" id="sel1">
                                 <option disabled selected>Quantity</option>
                                 <option value="1">YES</option>
@@ -736,20 +743,24 @@
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
-                            <!-- <label>Price</label> -->
+                            <label>Price</label>
                             <input name="price" type="text"  placeholder="Price" readonly>
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Material</label>
                             <input name="material_cost" type="text" placeholder="Material">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Equipment</label>
                             <input name="equipment_cost" type="text" placeholder="Equipment">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Margin %</label>
                             <input name="margin" type="text" placeholder="Margin %">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Select UOM</label>
                             <select name="uom_id" class="form-control select-form" id="uom_id">
                                 <option disabled selected>Select UOM</option>
 
@@ -761,9 +772,11 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Labor</label>
                             <input name="labor_cost" type="text" placeholder="Labor">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Supervision</label>
                             <input name="supervision_cost" type="text" placeholder="Supervision">
                         </div>
 
@@ -813,12 +826,15 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                            <label>Tag Name</label>
                             <input name="name" type="text" placeholder="Tag Name">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Default Annotation</label>
                             <input name="annotation" type="text" placeholder="Default Annotation Note">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Photo View</label>
                             <select  name="ref_id" class="form-control select-form">
                                 <option disabled selected>Photo View</option>
                                 @foreach($data['photoViews'] AS $key => $item)
@@ -828,6 +844,7 @@
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Spec Type</label>
                             <select name="spec_type" class="form-control select-form spec_type" id="">
                                 <option disabled selected>Spec Type</option>
                                 @forelse($data['specTypes'] AS $key => $item)
@@ -838,12 +855,13 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified build_spec_group" style="display: none; ">
-                            <!-- <label>Build Spec</label> -->
+                            <label>Build Spec</label>
                             <select name="build_spec" class=" form-control select-form build_spec" id="">
                                 <option disabled selected>Build Spec</option>
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified hover_field_type_group">
+                        <label>Hover Field Type</label>
                             <select name="hover_field_type_id" class="form-control select-form hover_field_type" id="">
                                 <option disabled selected>Hover Field Type</option>
 
@@ -856,13 +874,14 @@
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified hover_field_group"
                              style="display: none; ">
-                            <!-- <label>Hover Field</label> -->
+                            <label>Hover Field</label>
                             <select name="hover_field_id" class="form-control select-form hover_field" id="">
                                 <option disabled selected>Select Hover Field</option>
                             </select>
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Quantity</label>
                             <select name="has_qty" class="form-control select-form" id="sel1">
                                 <option disabled selected>Quantity</option>
                                 <option value="1">YES</option>
@@ -871,20 +890,24 @@
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
-                            <!-- <label>Price</label> -->
+                            <label>Price</label>
                             <input name="price" type="text"  placeholder="Price" readonly>
                         </div>
 
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Material</label>
                             <input name="material_cost" type="text" placeholder="Material">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Equipment</label>
                             <input name="equipment_cost" type="text" placeholder="Equipment">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>"Margin %</label>
                             <input name="margin" type="text" placeholder="Margin %">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Select UOM</label>
                             <select name="uom_id" class="form-control select-form" id="uom_id">
                                 <option disabled selected>Select UOM</option>
 
@@ -896,9 +919,11 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Labor</label>
                             <input name="labor_cost" type="text" placeholder="Labor">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Supervision</label>
                             <input name="supervision_cost" type="text" placeholder="Supervision">
                         </div>
 

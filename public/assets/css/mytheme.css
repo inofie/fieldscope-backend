@@ -313,9 +313,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     background: #F9FDFF;
 }
 
-.new-modal label {
+/* .new-modal label {
     color: #00ADE7;
-}
+} */
 
 .new-modal .modal-footer {
     background: #F0F1F2;
@@ -1405,6 +1405,7 @@ ul {
     width: 100%;
     border-radius: 5px !important;
     padding-left: 10px;
+    border: 1px solid #ccc !important;
 }
 
 .new-input-modal select {
@@ -1418,6 +1419,7 @@ ul {
     border-radius: 5px !important;
     padding-left: 10px;
     margin: 0;
+    border: 1px solid #ccc !important;
 }
 
 .mr-0 .form-group {
@@ -2086,7 +2088,7 @@ span.selection {
 
 .add-project-modal .select2-container--default .select2-selection--single .select2-selection__placeholder {
     color: #a8aaaa !important;
-
+    
 }
 
 .add-project-modal .select2-container--default.select2-container--disabled .select2-selection--single {

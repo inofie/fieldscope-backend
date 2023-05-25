@@ -15,7 +15,12 @@
         .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
             color: white;
         }
-
+        label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
     </style>
     <!-- New Work  -->
     <section class="user-managment">
@@ -451,12 +456,12 @@
                     <div class="modal-body companyinfobody rm-companyinfobody-modified">
                         <div class="row ">
                             <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Required Photo</la -->
+                                <label>Photo View</label>
                                 <input name="name" type="text"  placeholder="Photo View">
                             </div>
                             @if(!empty($data['companyGroups']))
-                                <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified" style="margin-bottom: 10px;">
-                                    <!-- <label>User Type</label> -->
+                                <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified">
+                                    <label>User Type</label>
 
                                     <select name="company_group_id[]" data-placeholder="User Type" class="select2" style="font-size: 20px;" multiple>
                                         @foreach($data['companyGroups'] AS $key => $item)
@@ -466,13 +471,13 @@
                                 </div>
                             @endif
                             <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Min Quantity</label> -->
+                                <label>Min Quantity</label>
                                 <input name="min_quantity" type="text"  placeholder="| Qty" class="quantity-input">
                             </div>
 
                             <div class="col-md-6 companyinfobody rm-companyinfobody-select-modified">
-                            <!-- <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label> -->
-                                <select name="thumbnail"  class="select2" data-placeholder="Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif"  @if($data['thumbnailCount'] > 0) disabled @endif>
+                            <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
+                                <select name="thumbnail"  class="select" data-placeholder="Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif"  @if($data['thumbnailCount'] > 0) disabled @endif>
                                     <option value="" disabled selected>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</option>
                                     <option value="1">Yes</option>
                                     <option value="0">No</option>
@@ -518,13 +523,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group  new-input-modal">
-                           
+                        <label>Photo View</label>
                             <input name="name" type="text" class="form-control"
                                    placeholder="Inspection Area Name">
                         </div>
 
                         <div class="form-group  ">
-                        
+                        <label>User Type</label>
                             <select name="company_group_id[]" class="select2 form-control " multiple>
 
                                 @foreach($data['companyGroups'] AS $key => $item)
@@ -534,8 +539,8 @@
                         </div>
 
                         <div class="form-group new-input-modal">
-                            
-                            <select name="thumbnail" class="select2 form-control " data-placeholder="Default Thumbnail">
+                        <label>Thumbnail @if($data['thumbnailCount'] > 0) (Already Set) @endif</label>
+                            <select name="thumbnail" class="select form-control " data-placeholder="Default Thumbnail">
                                 <option value=""></option>
                                 <option value="1">Yes</option>
                                 <option value="0">No</option>
@@ -543,7 +548,7 @@
                         </div>
 
                         <div class="form-group  new-input-modal">
-                           
+                        <label>Min Quantity</label>
                             <input name="min_quantity" type="text" class="form-control" placeholder="Quantity">
                         </div>
                     </div>

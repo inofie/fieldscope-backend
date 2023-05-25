@@ -498,12 +498,15 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                            <label>Tag Name</label>
                             <input name="name" type="text" placeholder="Tag Name">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Default Annotation</label>
                             <input name="annotation" type="text" placeholder="Default Annotation">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Select Req. Photo</label>
                             <select class="form-control select-form" name="ref_id">
                                 <option disabled selected>Select Req. Photo</option>
                                 @foreach($data['req_photo'] AS $key => $item)
@@ -512,6 +515,7 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Quantity</label>
                             {{--<input name="qty" type="text" placeholder="| Qty" class="quantity-input">--}}
                             <select name="has_qty" class="form-control select-form" id="has_qty">
                                 <option disabled selected>Quantity</option>
@@ -520,18 +524,23 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Price</label>
                             <input name="price" type="text" class="form-control" placeholder="Price" readonly>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Material</label>
                             <input name="material_cost" type="text" placeholder="Material">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Equipment</label>
                             <input name="equipment_cost" type="text" placeholder="Equipment">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Margin %</label>
                             <input name="margin" type="text" placeholder="Margin %">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Select UOM</label>
                             <select class="form-control select-form" name="uom_id" id="uom_id">
                                 <option disabled selected>Select UOM</option>
                                 @forelse($data['uoms'] AS $key => $item)
@@ -542,9 +551,11 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Labor</label>
                             <input name="labor_cost" type="text" placeholder="Labor">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Supervision</label>
                             <input name="supervision_cost" type="text" placeholder="Supervision">
                         </div>
 
@@ -596,12 +607,15 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Tag Name</label>
                             <input name="name" type="text" placeholder="Tag Name">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Default Annotation</label>
                             <input name="annotation" type="text" placeholder="Default Annotation">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Select Req. Photo</label>
                             <select class="form-control select-form" name="ref_id">
                                 <option disabled selected>Select Req. Photo</option>
                                 @foreach($data['req_photo'] AS $key => $item)
@@ -610,6 +624,7 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Quantity</label>
                             {{--<input name="qty" type="text" placeholder="| Qty" class="quantity-input">--}}
                                 <select name="has_qty" class="form-control select-form" id="has_qty">
                                     <option disabled selected>Quantity</option>
@@ -619,18 +634,23 @@
 
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Price</label>
                             <input name="price" type="text" class="form-control" placeholder="Price" readonly>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Material</label>
                             <input name="material_cost" type="text" placeholder="Material">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Equipment</label>
                             <input name="equipment_cost" type="text" placeholder="Equipment">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Margin %</label>
                             <input name="margin" type="text" placeholder="Margin %">
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Select UOM</label>
                             <select class="form-control select-form" name="uom_id" id="uom_id">
                                 <option disabled selected>Select UOM</option>
                                 @forelse($data['uoms'] AS $key => $item)
@@ -641,9 +661,11 @@
                             </select>
                         </div>
                         <div class="col-md-6 companyinfobody rm-companyinfobody-modified">
+                        <label>Labor</label>
                             <input name="labor_cost" type="text" placeholder="Labor">
                         </div>
                         <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
+                        <label>Supervision</label>
                             <input name="supervision_cost" type="text" placeholder="Supervision">
                         </div>
 

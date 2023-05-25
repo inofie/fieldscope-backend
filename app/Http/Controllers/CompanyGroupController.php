@@ -222,7 +222,7 @@ class CompanyGroupController extends Controller
         ];
 
         $response = $this->__validateRequestParams($request->all(), $param_rules,$customMessages);
-        dd($response);
+       // dd($response);
         if ($this->__is_error == true) {
             $error = \Session::get('error');
             $this->__setFlash('danger', 'Not Deleted Successfully', $error['data']);

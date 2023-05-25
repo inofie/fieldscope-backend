@@ -18,7 +18,27 @@
         .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
             color: white;
         }
-      
+        .company-intoduction-modal .modal-body .modal-table table .dropdown-menu {
+        left: 300px;
+        background-color: #f7f7f7;
+        }
+    .dropdown-menu {
+    box-shadow: none;
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none;
+    padding: 0px;
+    position: absolute;
+    text-shadow: none;
+    top: 100%;
+    z-index: 9998;
+    border: 1px solid #D9DEE4;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100px;
+    }
       #main_primary,#main_secondary {
         height: 170px;
         width: 300px;
@@ -883,8 +903,8 @@
                                                     <img src="{{asset('assets/images/dropdown-dots.png')}}" alt="...">
                                                     
                                                     </button>
-                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delete"><img src="{{asset('image/trash.png')}}" alt="..."></
+                                                        <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
+                                                            <li><a href="# " style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -898,8 +918,8 @@
                                                     <img src="{{asset('assets/images/dropdown-dots.png')}}" alt="...">
                                                     
                                                     </button>
-                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delete"><img src="{{asset('image/trash.png')}}" alt="..."></
+                                                        <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
+                                                            <li><a href="# " style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -914,8 +934,8 @@
                                                     <img src="{{asset('assets/images/dropdown-dots.png')}}" alt="...">
                                                     
                                                     </button>
-                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delete"><img src="{{asset('image/trash.png')}}" alt="..."></
+                                                        <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
+                                                            <li><a href="# " style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -929,8 +949,8 @@
                                                     <img src="{{asset('assets/images/dropdown-dots.png')}}" alt="...">
                                                     
                                                     </button>
-                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="# " class="delete"><img src="{{asset('image/trash.png')}}" alt="..."></
+                                                        <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
+                                                            <li><a href="#" style="text-align: center;" class="delIcon delete_section_item"><img src="{{asset('image/trash.png')}}" alt="...">
                                                         </ul>
                                                     </div>
                                             </div>
@@ -998,7 +1018,7 @@
                             <tr class="table-body">
                                 <td  class="left first-cell">{{$item->title}}</td>
                                 <td class="right">
-                                    <div class="dropdown">
+                                    <!-- <div class="dropdown">
                                     <button class="dropdown-dots dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                     <img src="{{asset('assets/images/dropdown-dots.png')}}" alt="...">
                                     </button>
@@ -1006,7 +1026,7 @@
                                         <li><a href="#"  data-id="{{$item->id}}" class="edit_intro"><img src="{{asset('image/edit.png')}}" alt="..."></a></li>
                                         <li><a href="#" data-id="{{$item->id}}" class="delete_intro"><img src="{{asset('image/trash.png')}}" alt="..."></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                                 </td>
                             </tr>
                         @endforeach
@@ -1798,7 +1818,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li><a class="delIcon delete_section_item" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a></li>
+                                                            <li><a class="delIcon delete_section_item" href="javascript:void(0)"><img src="{{asset('image/trash.png')}}" alt="..."></a></li>
                                                         </ul>
                                                     </div>
                                    
@@ -1807,7 +1827,7 @@
         })  
         
         $(document).on( 'click', '.delete_section_item', function(){
-            $(this).parent().parent().remove();
+            $(this).parent().parent().parent().parent().parent().remove();
         })  
         
         $('#add_more_item_option').click( function(){
@@ -1820,7 +1840,7 @@
                                                     
                                                     </button>
                                                         <ul class="dropdown-menu drop-delte" aria-labelledby="dropdownMenu1">
-                                                            <li> <a class="delIcon delete_section_item" href="javascript:void(0)"><i class="far fa-trash-alt"></i></a></li>
+                                                            <li> <a class="delIcon delete_section_item" href="javascript:void(0)"><img src="{{asset('image/trash.png')}}" alt="..."></a></li>
                                                         </ul>
                                                     </div>
                                    

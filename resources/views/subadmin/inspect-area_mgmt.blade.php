@@ -422,11 +422,11 @@
                     <div class="modal-body companyinfobody rm-companyinfobody-modified">
                         <div class="row">
                             <div class="col-md-12 companyinfobody rm-companyinfobody-modified">
-                                <!-- <label>Inspection Area Name</label> -->
+                                <label>Inspection Area Name</label>
                                 <input name="name" type="text" placeholder="Inspection Area Name">
                             </div>
                             <div class="col-md-12 companyinfobody rm-companyinfobody-select-modified">
-                                <!-- <label>User Type</label> -->
+                                <label>User Type</label>
                                 <select name="company_group_id[]" class="select2" style="font-size:20px;" multiple>
                                     @foreach($data['companyGroups'] AS $key => $item)
                                         <option value="{{$item->id}}">{{$item->title}}</option>
@@ -473,13 +473,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group new-input-modal">
-                        <label></label>
+                        <label>Inspection Area</label>
                             <input name="name" type="text" class="form-control"
                                    placeholder="Inspection Area Name">
                         </div>
 
                         <div class="form-group slect-option">
-                        <label></label>
+                        <label>User Types</label>
                             <select name="company_group_id[]" class="select2 form-control slect-option" multiple>
                                 @foreach($data['companyGroups'] AS $key => $item)
                                     <option value="{{$item->id}}">{{$item->title}}</option>

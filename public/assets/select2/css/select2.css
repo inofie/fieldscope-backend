@@ -17,6 +17,7 @@
       padding-right: 20px;
       overflow: hidden;
       text-overflow: ellipsis;
+      border: 1px solid #ccc !important;
       white-space: nowrap; }
     .select2-container .select2-selection--single .select2-selection__clear {
       position: relative; }
@@ -177,7 +178,7 @@
 
 .select2-container--default .select2-selection--multiple {
   background-color: white;
-  border: 1px solid #aaa;
+  
   border-radius: 4px;
   cursor: text; }
   .select2-container--default .select2-selection--multiple .select2-selection__rendered {

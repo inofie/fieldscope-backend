@@ -374,12 +374,12 @@
 
                 </div>
                 <div class="modal-footer logoimagefooter">
-                    <!-- <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">
+                    <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">
                         Cancel
                     </button>
                     <button type="submit" class="btn btn-save bg-modified filter_submit">Confirm
-                    </button> -->
-                    <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">
+                    </button>
+                    <!-- <button type="button" class="btn btn-close cancelButton" data-dismiss="modal">
                         <ul class="add-cancel-btn">
                             <li>-</li>
                             <li> Cancel</li>
@@ -390,7 +390,7 @@
                             <li>+</li>
                             <li>Save</li>
                         </ul>
-                    </button>
+                    </button> -->
                 </div>
             </form>
 

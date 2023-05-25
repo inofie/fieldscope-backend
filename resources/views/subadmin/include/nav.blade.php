@@ -32,7 +32,7 @@
 							<a href="{{ URL::to('subadmin') }}">User Types</a>
 						</li>
 						<li>
-							<a href="{{ URL::to('subadmin/inspect_user') }}">User Managment</a>
+							<a href="{{ URL::to('subadmin/inspect_user') }}">User Management</a>
 						</li>
 						<li>
 							<a href="{{ URL::to('subadmin/inspect_area') }}">Inspection Areas</a>
@@ -59,7 +59,7 @@
 							<a href="{{ URL::to('subadmin/subscription') }}">Subscription Management</a>
 						</li>
 						<li>
-							<a href="{{URL::to('subadmin/settings')}}">User Setting</a>
+							<a href="{{URL::to('subadmin/settings')}}">User Settings</a>
 						</li>
 					</ul>
 				</li>
