@@ -35,7 +35,7 @@
         border-bottom: solid 2px  #ededed;
     }
 </style>
-<table id="own_auth"  style="/*display: none;*/padding-top: 4rem;border-collapse: collapse;">
+<table id="own_auth"  style="padding-top: 4rem;border-collapse: collapse;">
     <tbody>
     {{--    Estimate Terms  Section --}}
     <tr class="">
@@ -53,7 +53,7 @@
                    class="">
                 <!-- inner tables header-->
                 @php
-                    // dd('reset',reset($subTotals)['breakdown'],$subTotals);
+                     //dd('reset',reset($subTotals)['breakdown'],$subTotals);
 
                     $colCount = 0;
                     $selectedBreakdowns = reset($subTotals)['breakdown'];
@@ -221,6 +221,9 @@
                         <p style="color: {{$companyDetails->secondary_color}}; ">Qty</p>
                     </td>
                     <td style=" padding: 8px 0;background-color: #e7e7e7;width: 90px;">
+                        <p style="color: {{$companyDetails->secondary_color}}; ">Price</p>
+                    </td>
+                    <td style=" padding: 8px 0;background-color: #e7e7e7;width: 90px;">
                         <p style="color: {{$companyDetails->secondary_color}}; ">Total</p>
                     </td>
                 </tr>
@@ -254,11 +257,15 @@
                             </td>
                             <td style="padding:5px 0;">
                                 <p style="color: {{$companyDetails->secondary_color}}; font-weight:bold;font-size:12px;text-transform:uppercase;">
-                                    Qty</p>
+                                {{ $companyDetails['json_data']['section_item']['qty'][$key]}}</p>
                             </td>
                             <td style="padding:5px 0;">
                                 <p style="color: {{$companyDetails->secondary_color}}; font-weight:bold;font-size:12px;text-transform:uppercase;">
                                     ${{ $companyDetails['json_data']['section_item']['price'][$key]}}</p>
+                            </td>
+                            <td style="padding:5px 0;">
+                                <p style="color: {{$companyDetails->secondary_color}}; font-weight:bold;font-size:12px;text-transform:uppercase;">
+                                    ${{ $companyDetails['json_data']['section_item']['total'][$key]}}</p>
                             </td>
                         </tr>
                         @php
@@ -296,7 +303,7 @@
     </tr>
 
 
-    
+
     {{-- special_instruction + Product Selection Section--}}
     <tr class="" style="padding: 0; margin: 0;"><td>
 
@@ -361,7 +368,7 @@
             </table>
     </td></tr>
 
-    
+
 
     @if(!empty($report->inspector_sign) || !empty($report->customer_sign))
         {{--    Project Details  Section --}}

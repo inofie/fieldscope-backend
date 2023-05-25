@@ -606,7 +606,8 @@ class User extends Model
             'user_group_id' => 1,
 //            'image_url'     => $request['image'],
             'created_at' => date(config('constants.DATE_FORMAT')),
-            'stripe_customer_id' => $request['stripe_customer_id']
+            'stripe_customer_id' => $request['stripe_customer_id'],
+            'token' => self::getToken()
         ];
 
         $date = Carbon::now();
@@ -628,6 +629,7 @@ class User extends Model
             'primary_user_id'=> $userId,
             'created_at'     => date(config('constants.DATE_FORMAT')),
         ];
+        // dd($company);
 
         $companyId = Company::insertGetId($company);
         $result['company'] = $companyId;

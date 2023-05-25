@@ -59,18 +59,21 @@
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <label htmlfor="custom-input1">Email address</label>
-                                            <input type="email" name="email" class="form-control login-ipfields" id="custom-input1" placeholder="Enter your email" required="required" autocomplete="off"  />                                            
+                                            <input type="email" name="email" class="form-control login-ipfields"
+                                           <?php  if(Cookie::has('adminemail')) ?> value="<?php echo e(Cookie::get('adminemail')) ?>"  id="custom-input1" placeholder="Enter your email" required="required" autocomplete="off"  />
                                         </div>
                                         <div class="form-group">
                                            <div class="flex-item">
-                                           <label htmlfor="custom-input2" class="login-forgetpassword">Password</label>  
+                                           <label htmlfor="custom-input2" class="login-forgetpassword">Password</label>
                                             <a href="{{URL::to('subadmin/login/forget_password')}}" class="login-forgotpass">Forgot your password?</a>
-                                           </div>                                          
-                                            <input type="password" name="password" class="form-control login-ipfields" id="custom-input2" required="required" placeholder="Enter your password"/>
-                                            
+                                           </div>
+                                            <input type="password" name="password" class="form-control login-ipfields" id="custom-input2"
+                                            <?php  if(Cookie::has('adminpwd')) ?> value="<?php echo e(Cookie::get('adminpwd')) ?>" required="required" placeholder="Enter your password"/>
+
                                         </div>
                                         <div class="form-group form-check login-form-check">
-                                            <input type="checkbox" name="remember_me" value="1" class="form-check-input login-ipcheck" id="exampleCheck1" checked />
+                                            <input type="checkbox" @if(Cookie::has('adminemail')) checked @endif name="remember_me"
+                                            class="form-check-input login-ipcheck" id="exampleCheck1"  />
                                             <label class="form-check-label m-0" htmlfor="exampleCheck1">Remember me</label>
                                         </div>
                                         <input type="submit" name="submit" class="login-btn" value="Login"  id="login-btn" />
@@ -83,13 +86,13 @@
                                         <div class="d-inline-block mr-3 login-icon-as"><a href="/"><img src="{{asset('image/app.png')}}"  alt="app store icon" /></a></div>
                                         <div class="d-inline-block login-icon-ps"><a href="/"><img src="{{asset('image/android.png')}}"  alt="google play store icon" /></a></div>
                                     </div>
-                                    <div class="login-rightside-footersec text-right footer-for-sc login-footer">                                 
+                                    <div class="login-rightside-footersec text-right footer-for-sc login-footer">
 
                                         <ul class="mb-0">
                                             <li><a href="/">@2021 RaceTrack Connection</a></li>
                                             <li><a href="/">Site Map</a></li>
                                             <li><a href="/" class="mr-0">Privacy Policy</a></li>
-                                        </ul>                                                            
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -98,16 +101,16 @@
                                     <a href="{{URL::to('signup')}}" class=" login-for-sc-dha">Don’t have an account? </a>
                                     <button >get started</button>
                                 </div>
-                                <div class="login-rightsidevhdiv"></div>                                
-                            </div>    
-                                                    
+                                <div class="login-rightsidevhdiv"></div>
+                            </div>
+
                         </div>
-                        <div class="login-rightside-footersec text-right footer-ls login-footer">                                 
+                        <div class="login-rightside-footersec text-right footer-ls login-footer">
                             <ul class="mb-0">
                                 <li><a href="/">@2021 RaceTrack Connection</a></li>
                                 <li><a href="/">Site Map</a></li>
                                 <li><a href="/" class="mr-0">Privacy Policy</a></li>
-                            </ul>                                                            
+                            </ul>
                         </div>
                     </div>
                   </div>

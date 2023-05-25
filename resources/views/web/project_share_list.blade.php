@@ -140,7 +140,7 @@
                     @if(!empty($data['media']->total()))
                         @foreach($data['media'] AS $key => $item)
                             <div class="col-md-2 mb-3">
-                                <a href="/">
+                                <a href="{{url('uploads/media/'.$item->path )}}">
                                     <div class="card-image">
                                         <img src="{{url('uploads/media/'.$item->path )}}" class="img-responsive"/>
                                     </div>

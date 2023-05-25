@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Lang;
 use phpDocumentor\Reflection\DocBlock\Tags\Formatter;
 use Illuminate\Support\Facades\Log;
+use Auth;
 
 class UserController extends Controller
 {
@@ -564,6 +565,7 @@ class UserController extends Controller
      */
     public function updateAgent(Request $request)
     {
+
         $request['id'] = $user_id = (isset($request->target_id)) ? $request->target_id : $request['user_id'];
         $param_rules['id'] = 'required|exists:user';
 //        $param_rules['name'] = 'required|string|max:100';
@@ -583,10 +585,21 @@ class UserController extends Controller
 
         //$obj = User::where(['company_id' => 15, 'id' => $user_id]); //$request['user_id']
 
-        $name = explode(' ', $request['name']);
+        $name = explode(" ", $request['name']);
+        $first_name='';
+        $last_name='';
+        foreach($name as $key=>$val){
+        if($key==0){
+        $first_name=$val;
+        }else{
+        $last_name .= $val.' ';
+        }
+        }
+
+        // $name = explode(' ', $request['name']);
         $data = [
-            'first_name' => $name[0],
-            'last_name' => isset($name[1]) ? $name[1] : '',
+            'first_name' => trim($first_name),
+            'last_name' => trim($last_name),
 //            'email'         => $request['email'],
             'mobile_no' => $request['mobile_no'],
 //            'date_of_join'  => $request['date_of_join'],
@@ -810,8 +823,13 @@ class UserController extends Controller
         User::where(['id' => $user[0]->id])->update(['device_type' => $request->device_type ,'device_token' => $request->device_token]);
 
         if (!empty($request['remember_me'])) {
-            $response = new Response('test');
-            $response->withCookie(cookie('remember_me', $request->email, '518400'));
+           Cookie::queue('adminemail', $request->email,1440);
+           Cookie::queue('adminpwd', $request->password,1440);
+
+
+            // dd($request['remember_me']);
+            // $response = new Response('test');
+            // $response->withCookie(cookie('remember_me', $request->email, '518400'));
 
         } else {
 
